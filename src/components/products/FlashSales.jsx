@@ -32,23 +32,6 @@ const FlashSales = ({ Item }) => {
         </div>
       </div>
     </div>
-
-    // <div className="w-full flex flex-col items-start justify-start space-y-2 bg-white border-black border-[0.1px]">
-    //   <div className="flex flex-col justify-start items-start hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-lg w-96 lg:w-56 h-96 md:h-96 lg:h-[22rem] hover:scale-105 ease-in-out transition-all">
-    //
-    //   </div>
-    //   <div className="flex items-center justify-center ps:w-28 ps:h-28 md:w-44 md:h-1/4">
-    //     <img src={image} alt="" className="w-full h-full" />
-    //   </div>
-
-    //   <div className=" flex flex-col justify-start">
-    //     <div className="flex items-start justify-between">
-    //       <h2 className="text-[16px] font-medium">{title}</h2>
-    //       <img src={addCart} alt="addcart" />
-    //     </div>
-    //
-    //   </div>
-    // </div>
   );
 };
 

@@ -15,7 +15,7 @@ const Flash = () => {
     containerRef.current.scrollLeft = newScrollPosition;
   };
   return (
-    <div className="px-2s md:px-6 lg:px-20 lg:py-20 md:py-10 py-4 w-full">
+    <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-4 w-full">
       <div className="w-full">
         <div className="border-l-[25px] border-[#FF8933] py-2 pl-4 font-inter">
           <h1 className="font-semibold text-[36px] text-[#282727]">

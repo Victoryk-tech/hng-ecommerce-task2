@@ -7,7 +7,7 @@ import bests from "./database/bestSeller";
 
 const BestSeller = () => {
   return (
-    <div className="px-36 py-4 w-full">
+    <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-4 w-full">
       <div className="">
         <div className="border-l-[16px] border-[#FF8933] py-5 px-2 font-inter">
           <h1 className="font-semibold text-[16px] text-[#FF8933]">
@@ -22,7 +22,7 @@ const BestSeller = () => {
           </div>
         </div>
 
-        <div className="grid ps:grid-cols-2 md:grid-cols-3 lg:grid-col-6 items-start justify-start space-x-3 py-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-start justify-start  space-y-4 py-6">
           {bests.map((best, index) => {
             return (
               <div>

@@ -7,7 +7,7 @@ import products from "./database/mainProduct";
 
 const Main = () => {
   return (
-    <div className="px-28 py-10 space-y-3">
+    <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-4 w-full">
       <div className="">
         <div className="border-l-[16px] border-[#FF8933] py-5 px-2 font-inter">
           <h1 className="font-semibold text-[16px] text-[#FF8933]">
@@ -40,7 +40,7 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 items-start justify-start space-x-4 py-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start  space-y-4 space-x-2 py-6">
         {products.map((product, index) => {
           return (
             <div>
