@@ -2,11 +2,12 @@ import React from "react";
 
 import BestProducts from "./products/BestProducts";
 import bests from "./database/bestSeller";
+import ViewBtn from "../shared/ViewBtn";
 
 const BestSeller = () => {
   return (
-    <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-4 w-full">
-      <div className="">
+    <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-28 w-full">
+      <div className="space-y-4">
         <div className="border-l-[16px] border-[#FF8933] py-5 px-2 font-inter">
           <h1 className="font-semibold text-[16px] text-[#FF8933]">
             This Month
@@ -27,13 +28,8 @@ const BestSeller = () => {
             );
           })}
         </div>
-        <a
-          href="#"
-          className="bg-[#FF8933] text-white px-8 py-3 font-semibold text-[16px]"
-        >
-          View all Products
-        </a>
       </div>
+      <ViewBtn />
     </div>
   );
 };

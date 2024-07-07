@@ -15,10 +15,6 @@ const Header = () => {
       <TopNav />
       <div className="px-4 md:px-10 lg:px-24 py-6 border-b-[0.5px] border-black  bg-[#FAFAFA] w-full">
         <div className="flex items-center justify-between ">
-          <div className="flex items-center justify-center md:hidden space-x-4">
-            <img src={menu} alt="" />
-            <img src={search} alt="" />
-          </div>
           <Link to="/">
             {" "}
             <div>
@@ -31,8 +27,11 @@ const Header = () => {
             <a href="#">New in</a>
             <a href="#">Best Seller</a>
           </nav>
-          <div className="flex items-center justify-center space-x-4 ">
-            <img src={user} alt="" />
+          <div className="flex items-center justify-center space-x-2">
+            <div className="hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-3">
+              <input type="text" className="outline-none bg-none py-2" />
+              <img src={search} className="text-[20px] hover:text-[#FF8933]" />
+            </div>
             <Link to="/cart" className="relative">
               {" "}
               <IoCartOutline className="text-[20px]" />
@@ -40,9 +39,6 @@ const Header = () => {
                 {cartState.totalQuantity}
               </h1>
             </Link>
-
-            <img src={search} className="text-[20px] hidden md:block" />
-            <img src={love} alt="" className="hidden md:block" />
           </div>
         </div>
       </div>

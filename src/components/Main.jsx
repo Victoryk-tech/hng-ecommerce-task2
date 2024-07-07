@@ -7,7 +7,7 @@ import products from "./database/mainProduct";
 
 const Main = () => {
   return (
-    <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-16 w-full">
+    <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 pb-10 w-full">
       <div className="space-y-5">
         <div className="border-l-[16px] border-[#FF8933] py-5 px-2 font-inter">
           <h1 className="font-semibold text-[16px] text-[#FF8933]">
@@ -34,6 +34,14 @@ const Main = () => {
             </div>
           );
         })}
+      </div>
+      <div className="pt-6">
+        <a
+          href="#"
+          className="bg-[#FF8933] text-white py-3 px-5 w-[60%] md:w-[60%] lg:w-[70%] font-semibold text-[16px]"
+        >
+          Load more
+        </a>
       </div>
     </div>
   );

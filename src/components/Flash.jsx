@@ -3,11 +3,12 @@ import items from "../components/database/flashProduct";
 import FlashSales from "./products/FlashSales";
 
 import Timer from "./Timer";
+import ViewBtn from "../shared/ViewBtn";
 
 const Flash = () => {
   return (
     <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-4 w-full">
-      <div className="w-full">
+      <div className="w-full space-y-6">
         <div className="border-l-[25px] border-[#FF8933] py-2 pl-4 font-inter">
           <h1 className="font-semibold text-[24px] lg:text-[36px] text-[#282727]">
             Flash Sales
@@ -24,13 +25,8 @@ const Flash = () => {
             );
           })}
         </div>
-        <a
-          href="#"
-          className="bg-[#FF8933] text-white px-8 py-3 font-semibold text-[16px]"
-        >
-          View all Products
-        </a>
       </div>
+      <ViewBtn />
     </div>
   );
 };

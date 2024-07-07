@@ -14,13 +14,13 @@ const Footer = () => {
           <p className="font-light text-[16px] font-poppin">
             Get 10% off your first order
           </p>
-          <div className="flex items-start justify-between py-2 pl-2 w-[95%] md:w-[82%] lg:w-[30%] border-white border-[1px]  bg-transparent text-[16px] font-normal font-poppin">
+          <div className="flex items-start justify-between py-2 pl-2 w-[95%] md:w-[82%] lg:w-[50%] border-white border-[1px]  bg-transparent text-[16px] font-normal font-poppin">
             <input
               type="text"
               placeholder="Enter your email"
               className=" outline-none bg-transparent"
             />
-            <img src={send} alt="" />
+            <img src={send} alt="" className="pr-2" />
           </div>
         </div>
         <div className="flex  items-start justify-between w-full">
