@@ -1,7 +1,5 @@
 import React from "react";
 
-import leftarrow from "../assets/leftarrow.png";
-import rightarrow from "../assets/rightarrow.png";
 import BestProducts from "./products/BestProducts";
 import bests from "./database/bestSeller";
 
@@ -16,10 +14,6 @@ const BestSeller = () => {
         </div>
         <div className="flex items-start justify-between">
           <h1 className="font-semibold text-[36px]">Best Selling Products</h1>
-          <div className="flex ">
-            <img src={leftarrow} alt="" />
-            <img src={rightarrow} alt="" />
-          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-start justify-start  space-y-4 py-6">
