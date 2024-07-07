@@ -11,7 +11,7 @@ import user from "../assets/user.png";
 const Header = () => {
   const { cartState } = useContext(cartContext);
   return (
-    <div className=" flex flex-col items-start justify-start w-full h-auto sticky top-0 ">
+    <div className=" flex flex-col items-start justify-start w-full h-auto sticky top-0 z-[999]">
       <TopNav />
       <div className="px-4 md:px-10 lg:px-24 py-6 border-b-[0.5px] border-black  bg-[#FAFAFA] w-full">
         <div className="flex items-center justify-between ">

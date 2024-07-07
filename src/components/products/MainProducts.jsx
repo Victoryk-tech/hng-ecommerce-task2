@@ -12,7 +12,7 @@ const MainProducts = ({ Product }) => {
     dispatch({ type: "Add_To_Cart", payload: item });
   };
   return (
-    <div className="flex flex-col justify-start items-start p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[11.2rem] lg:w-56 h-[16rem] md:w-[15rem] md:h-60 lg:h-[18rem] hover:scale-95 ease-in-out transition-all">
+    <div className="flex flex-col justify-start items-start p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[11.2rem] lg:w-64 h-[16rem] md:w-[15rem] md:h-60 lg:h-[19rem] hover:scale-95 ease-in-out transition-all">
       <div className="flex items-center justify-center w-full h-1/2 ">
         <img src={image} alt="" className="w-full h-full object-contain" />
       </div>

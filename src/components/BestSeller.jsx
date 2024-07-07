@@ -16,7 +16,7 @@ const BestSeller = () => {
           <h1 className="font-semibold text-[36px]">Best Selling Products</h1>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-start justify-start  space-y-4 py-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start space-y-4 md:space-y-4 lg:space-y-2 py-6">
           {bests.map((best, index) => {
             return (
               <div>

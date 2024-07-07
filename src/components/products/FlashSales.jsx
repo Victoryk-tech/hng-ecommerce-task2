@@ -7,7 +7,7 @@ const FlashSales = ({ Item }) => {
   const { rating, oldprice, amount, title, image } = Item;
   //console.log(Item);
   return (
-    <div className="flex flex-col justify-start items-start p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[11.2rem] lg:w-56 h-[16rem] md:w-[15rem] md:h-60 lg:h-[18rem] hover:scale-95 ease-in-out transition-all">
+    <div className="flex flex-col justify-start items-start p-2 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[11.2rem] lg:w-64 h-[16rem] md:w-[15rem] md:h-60 lg:h-[19rem] hover:scale-95 ease-in-out transition-all">
       <div className="w-full flex items-start justify-between">
         {" "}
         <img src={discount} alt="" />

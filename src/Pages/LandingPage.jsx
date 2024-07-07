@@ -17,7 +17,7 @@ const LandingPage = () => {
       <Flash />
       <BestSeller />
       <Main />
-      <Arrival />
+
       <Service />
     </div>
   );

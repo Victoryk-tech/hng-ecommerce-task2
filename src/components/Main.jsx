@@ -40,7 +40,7 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start  space-y-4 space-x-2 py-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start space-y-4 md:space-y-4 lg:space-y-2 space-x-2 py-6">
         {products.map((product, index) => {
           return (
             <div>
