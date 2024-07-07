@@ -5,7 +5,7 @@ import stroke from "../assets/stroke.png";
 
 const Hero = () => {
   return (
-    <div className="px-6 md:px-6 lg:px-20 py-20 md:py-10 font-inter w-full">
+    <div className="px-2  md:px-4 lg:px-20 py-20 md:py-10 font-inter w-full">
       <div className="flex flex-col md:flex md:flex-row items-center justify-center md:start md:justify-between md:space-x-4">
         <div className="  text-center md:text-start">
           <h1 className="font-semibold text-[36px]">
@@ -17,12 +17,12 @@ const Hero = () => {
           <img
             src={heror}
             alt=""
-            className="ps:w-[14.5rem] md:w-[15rem] lg:w-80 contain-content sm:w-[10.2rem]"
+            className="md:w-[15rem] lg:w-80 contain-content w-[13rem]"
           />
           <img
             src={hero}
             alt=""
-            className="sm:w-[8.3rem] ps:w-[10.6rem] md:w-[11rem] lg:w-56 contain-content"
+            className="w-[10.6rem] md:w-[11rem] lg:w-56 contain-content"
           />
         </div>
       </div>

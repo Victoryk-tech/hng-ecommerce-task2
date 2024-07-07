@@ -45,7 +45,7 @@ const Timer = () => {
         <p className="font-medium text-[12px]">
           <small>Days</small>
         </p>
-        <p className="font-bold text-[32px]">{timerDays}</p>
+        <p className="font-bold text-[24px] lg:text-[32px]">{timerDays}</p>
       </div>
       <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-5 px-3">
         :
@@ -54,7 +54,7 @@ const Timer = () => {
         <p className="font-medium text-[12px]">
           <small>Hours</small>
         </p>
-        <p className="font-bold text-[32px]">{timerHours}</p>
+        <p className="font-bold text-[24px] lg:text-[32px]">{timerHours}</p>
       </div>
       <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-5 px-3">
         :
@@ -63,7 +63,7 @@ const Timer = () => {
         <p className="font-medium text-[12px]">
           <small>Minutes</small>
         </p>
-        <p className="font-bold text-[32px]">{timerMinutes}</p>
+        <p className="font-bold text-[24px] lg:text-[32px]">{timerMinutes}</p>
       </div>
       <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-5 px-3">
         :
@@ -72,7 +72,7 @@ const Timer = () => {
         <p className="font-medium text-[12px]">
           <small>Seconds</small>
         </p>
-        <p className="font-bold text-[32px]">{timerSecs}</p>
+        <p className="font-bold text-[24px] lg:text-[32px]">{timerSecs}</p>
       </div>
     </div>
   );

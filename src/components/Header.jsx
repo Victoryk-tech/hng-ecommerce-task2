@@ -29,9 +29,7 @@ const Header = () => {
           <nav className="hidden md:block md:space-x-5 lg:space-x-10 text-[16px] font-normal">
             <a href="#">Shop</a>
             <a href="#">New in</a>
-            <a href="#">Best Sellers</a>
-            <a href="#">About Us</a>
-            <a href="#">Sales</a>
+            <a href="#">Best Seller</a>
           </nav>
           <div className="flex items-center justify-center space-x-4 ">
             <img src={user} alt="" />
