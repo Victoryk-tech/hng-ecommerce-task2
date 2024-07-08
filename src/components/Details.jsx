@@ -1,22 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import flash1 from "../assets/flashA.png";
 import ViewBtn from "../shared/ViewBtn";
+import CheckoutProduct from "./products/CheckoutProduct";
+import { CartContext } from "./context/ContextProvider";
 
 const Details = () => {
+  const { cartState } = useContext(CartContext);
+
   return (
     <div className="flex flex-col items-start justify-start pb-14 lg:px-6 w-full md:w-[43%]">
-      <div className="flex items-center justify-between py-2 w-full">
-        <div className="flex items-center justify-center gap-2">
-          <img src={flash1} alt="" className="w-16 h-16 object-contain" />
-          <p className="font-poppin font-normal text-[16px]">title</p>
-        </div>
-        <p className="font-poppin font-normal text-[16px]">amout</p>
+      <div className="w-full">
+        {cartState.cart.map((item, index) => {
+          return (
+            <div>
+              <CheckoutProduct key={index} Items={item} />
+            </div>
+          );
+        })}
       </div>
+
       <div className="flex flex-col w-full">
         <div>
           <div className="flex items-start justify-between border-b-[0.3px] border-black py-4">
             <p className="font-poppin font-normal text-[16px]">Subtotal</p>
-            <p className="font-poppin font-normal text-[16px]">amout</p>
+            <p className="font-poppin font-normal text-[16px]">
+              {" "}
+              {cartState.totalPrice.toLocaleString()}
+            </p>
           </div>
           <div className="flex items-start justify-between border-b-[0.3px] border-black py-4">
             <p className="font-poppin font-normal text-[16px]">Shipping</p>
@@ -24,7 +34,10 @@ const Details = () => {
           </div>
           <div className="flex items-start justify-between py-4">
             <p className="font-poppin font-normal text-[16px]">total:</p>
-            <p className="font-poppin font-normal text-[16px]">amount</p>
+            <p className="font-poppin font-normal text-[16px]">
+              {" "}
+              {cartState.totalPrice.toLocaleString()}
+            </p>
           </div>
         </div>
         <div className="flex flex-col  items-start justify-start">

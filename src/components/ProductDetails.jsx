@@ -29,11 +29,11 @@ const ProductDetails = () => {
         <div className="flex flex-col items-start justify-start py-32 md:py-0 lg:px-48 space-y-5 lg:w-[100%] lg:h-[80%]">
           <div className="space-y-2">
             <p className="font-inter font-semibold text-[24px]">{title}</p>
-            <div className="flex items-center justify-center space-x-2">
+            <div className="flex items-center justify-center space-x-2 font-normal text-[14px]">
               <img src={fivestar} alt="" />
               <p>(150 Reviews)</p>
-              <p>|</p>
-              <p>in stock</p>
+              <p className="text-xl">|</p>
+              <p className="text-[#00FF66]">in stock</p>
             </div>
             <p className="font-inter font-medium text-[24px]">${amount}</p>
           </div>

@@ -4,6 +4,7 @@ import fivestar from "../../assets/fivestar.png";
 import { CartContext } from "../context/ContextProvider";
 import products from "../database/mainProduct";
 import { Link } from "react-router-dom";
+import { BsBag } from "react-icons/bs";
 
 const MainProducts = ({ Product }) => {
   const { cartState, dispatch } = useContext(CartContext);
@@ -23,7 +24,12 @@ const MainProducts = ({ Product }) => {
       <div className=" w-full h-1/3  space-y-2 px-1 pt-2">
         <div className="flex items-start justify-between">
           <h2 className="text-[14px] md:text-[16px] font-medium">{title}</h2>
-          <img src={addCart} alt="addcart" onClick={() => addToCart(Product)} />
+          <p
+            className="text-[20px] text-center font-[900] bg-[#FF8933] p-[11px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
+            onClick={() => addToCart(Product)}
+          >
+            <BsBag />
+          </p>
         </div>
         <div className="flex items-start justify-start space-x-3">
           <p className="text-[14px] md:text-[16px] text-[#bd9b9b]">${amount}</p>

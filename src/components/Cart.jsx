@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cartState } = useContext(CartContext);
-  console.log(cartState.cart);
+
   return (
     <div className="w-full h-full px-2 md:px-4 lg:px-20 py-10">
       <div className="text-[11px] flex items-start justify-start font-poppin font-normal md:text-[16px] gap-1 lg:space-x-3 pb-10">
@@ -14,7 +14,7 @@ const Cart = () => {
 
         <p>Cart</p>
       </div>
-      <nav className="flex items-start justify-between text-center p-4 shadow-[0_7px_25px_rgba(0,0,0,0.08)]">
+      <nav className="flex items-start justify-between text-center p-4 shadow-md">
         <p>Product</p>
         <p>Price</p>
         <p>Quantity</p>
@@ -23,7 +23,7 @@ const Cart = () => {
       <div className="pt-5  w-full">
         {cartState.cart.map((item, index) => {
           return (
-            <div>
+            <div className="">
               <CartProduct key={index} cartItems={item} />
             </div>
           );

@@ -26,8 +26,8 @@ const CartProduct = ({ cartItems }) => {
     dispatch({ type: "Remove_From_Cart", payload: item });
   };
   return (
-    <div className="flex items-center justify-between text-center p-4 shadow-[0_7px_25px_rgba(0,0,0,0.08)] w-full">
-      <div className="gap-4">
+    <div className="flex items-center justify-between text-center px-4 py-2 shadow-md hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] w-full">
+      <div className="flex items-center justify-center space-x-2">
         <div className="w-12 h-12 lg:w-16 lg:h-16">
           <img src={image} alt="" className="w-full h-full object-contain" />
         </div>
@@ -39,7 +39,7 @@ const CartProduct = ({ cartItems }) => {
         </p>
       </div>
 
-      <div className="flex items-center justify-center border-black border-[0.5px] p-1 space-x-1 hover:border-[#FF8933]">
+      <div className="flex items-center justify-center border-black border-[0.5px] px-2 space-x-1 hover:border-[#FF8933]">
         <p>{quantity}</p>
         <div>
           <img
