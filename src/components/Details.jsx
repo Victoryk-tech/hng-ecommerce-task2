@@ -42,15 +42,15 @@ const Details = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 ">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:mt-6">
           <input
             type="text"
             placeholder="Coupon code"
-            className="p-3 md::py-2 pl-2  w-full md:w-[100%] lg:w-[30%] border-black border-2 text-[15px]"
+            className="p-3 md::py-2 pl-2  w-full md:w-[100%] lg:w-[62%] border-black border-[1px] text-[15px]"
           />
           <a
             href="#"
-            className="bg-[#FF8933] text-center text-white py-4 md:py-[13px] px-5 w-[100%] lg:w-[100%] font-semibold text-[12px]"
+            className="bg-[#FF8933] text-center text-white py-4 md:py-[13px] lg:py-[15px] px-5 w-[100%] lg:w-[35%] font-semibold text-[12px]"
           >
             Apply Coupon
           </a>
