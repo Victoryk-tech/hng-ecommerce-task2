@@ -28,20 +28,30 @@ const CartProduct = ({ cartItems }) => {
   return (
     <div className="flex items-center justify-between text-center p-4 shadow-[0_7px_25px_rgba(0,0,0,0.08)] w-full">
       <div className="gap-4">
-        <div className="w-16 h-16">
+        <div className="w-12 h-12 lg:w-16 lg:h-16">
           <img src={image} alt="" className="w-full h-full object-contain" />
         </div>
         <p className="font-poppin font-semibold text-[16px]">{title}</p>
       </div>
       <div>
-        <p className="font-poppin font-semibold text-[16px]">{amount}</p>
+        <p className="font-poppin font-semibold text-[16px]">${amount}</p>
       </div>
 
-      <div className="flex items-center justify-center border-black border-[1px] p-1 space-x-2">
+      <div className="flex items-center justify-center border-black border-[0.5px] p-1 space-x-1 hover:border-[#FF8933]">
         <p>{quantity}</p>
         <div>
-          <img src={dropup} alt="" onClick={() => IncreaseCart(cartItems)} />
-          <img src={dropdown} alt="" onClick={() => DecreaseCart(cartItems)} />
+          <img
+            src={dropup}
+            alt=""
+            onClick={() => IncreaseCart(cartItems)}
+            className="hover:bg-[#FF8933] hover:rounded-lg"
+          />
+          <img
+            src={dropdown}
+            alt=""
+            onClick={() => DecreaseCart(cartItems)}
+            className="hover:bg-[#FF8933] hover:rounded-lg"
+          />
         </div>
       </div>
       <div>
