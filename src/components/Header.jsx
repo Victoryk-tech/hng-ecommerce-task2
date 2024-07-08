@@ -28,7 +28,7 @@ const Header = () => {
             <a href="#">Best Seller</a>
           </nav>
           <div className="flex items-center justify-center space-x-2">
-            <div className="hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-1 md:pl-3">
+            <div className="pr-2 bg-[#fafafa] hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-1 md:pl-3">
               <input type="text" className="outline-none bg-none py-2" />
               <img
                 src={search}
