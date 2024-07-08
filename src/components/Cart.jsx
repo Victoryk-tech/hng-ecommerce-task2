@@ -53,7 +53,7 @@ const Cart = () => {
             <div className="flex items-start justify-between border-b-[0.3px] border-black py-4">
               <p className="font-poppin font-normal text-[16px]">Subtotal</p>
               <p className="font-poppin font-normal text-[16px]">
-                {cartState.totalQuantity}
+                {cartState.totalPrice.toLocaleString()}
               </p>
             </div>
             <div className="flex items-start justify-between border-b-[0.3px] border-black py-4">
