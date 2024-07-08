@@ -12,7 +12,7 @@ const ProductDetails = () => {
     items;
   return (
     <div className="w-full h-auto px-2 lg:pl-16 py-10 gap-3">
-      <div className="flex items-start justify-start font-poppin font-normal text-[16px] space-x-3 pb-10">
+      <div className="flex items-start justify-start font-poppin font-normal text-[14px] md:text-[16px] space-x-3 pb-10">
         <p>Home</p>
         <p>/</p>
         <p>Category</p>
@@ -22,27 +22,38 @@ const ProductDetails = () => {
 
         <p>{title}</p>
       </div>
-      <div className="flex flex-col  md:flex-row items-start md:items-center justify-center md:justify-between ">
-        <div className="w-full h-full lg:w-[90%] lg:h-[90%]">
+      <div className="flex flex-col  md:flex-row items-start md:items-center justify-center md:justify-between w-full lg:h-[100vh]">
+        <div className="w-full h-full lg:w-[100%] lg:h-[90%]">
           <img src={image} alt="" className="w-full h-full object-contain" />
         </div>
-        <div className="flex flex-col items-start justify-start lg:px-48 space-y-5">
-          <div>
+        <div className="flex flex-col items-start justify-start py-32 md:py-0 lg:px-48 space-y-5 lg:w-[100%] lg:h-[80%]">
+          <div className="space-y-2">
             <p className="font-inter font-semibold text-[24px]">{title}</p>
-            <div></div>
-            <p className="font-inter font-normal text-[24px]">${amount}</p>
+            <div className="flex items-center justify-center space-x-2">
+              <img src={fivestar} alt="" />
+              <p>(150 Reviews)</p>
+              <p>|</p>
+              <p>in stock</p>
+            </div>
+            <p className="font-inter font-medium text-[24px]">${amount}</p>
           </div>
 
-          <div>
+          <div className="border-b-[1px] border-black pb-6 w-full">
             <p className="font-poppin font-normal text-[14px]">{description}</p>
           </div>
-          <div className="flex items-start justify-between">
-            <div className=" flex border-black border-[1px]">
-              <p>-</p>
-              <p>2</p>
-              <p>+</p>
+          <div className="flex items-start justify-between w-full">
+            <div className=" flex items-center border-black border-[1px]">
+              <p className=" px-4 border-r-[1px] border-black text-[38px] lg:text-[30px]  ">
+                -
+              </p>
+              <p className="py-2 px-8 border-r-[1px] border-black text-[26px] font-medium">
+                0
+              </p>
+              <p className="px-4 text-[38px]">+</p>
             </div>
-            <a href="#">Buy Now</a>
+            <button className="py-4 w-[42%] md:w-[36%]  bg-[#FF8933] text-white hover:bg-white hover:text-[#FF8933] hover:scale-100 transition-all ease-in hover:border-[#FF8933] hover:border-[1px]">
+              Buy Now
+            </button>
           </div>
 
           <div>

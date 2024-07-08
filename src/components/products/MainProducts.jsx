@@ -23,11 +23,7 @@ const MainProducts = ({ Product }) => {
       <div className=" w-full h-1/3  space-y-2 px-1 pt-2">
         <div className="flex items-start justify-between">
           <h2 className="text-[14px] md:text-[16px] font-medium">{title}</h2>
-          <img
-            src={addCart}
-            alt="addcart"
-            onClick={() => addToCart(products)}
-          />
+          <img src={addCart} alt="addcart" onClick={() => addToCart(Product)} />
         </div>
         <div className="flex items-start justify-start space-x-3">
           <p className="text-[14px] md:text-[16px] text-[#bd9b9b]">${amount}</p>

@@ -34,7 +34,9 @@ const CartProduct = ({ cartItems }) => {
         <p className="font-poppin font-semibold text-[16px]">{title}</p>
       </div>
       <div>
-        <p className="font-poppin font-semibold text-[16px]">${amount}</p>
+        <p className="font-poppin font-semibold text-[16px]">
+          ${amount.toLocaleString()}
+        </p>
       </div>
 
       <div className="flex items-center justify-center border-black border-[0.5px] p-1 space-x-1 hover:border-[#FF8933]">
