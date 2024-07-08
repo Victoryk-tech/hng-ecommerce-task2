@@ -57,7 +57,7 @@ const CartProduct = ({ cartItems }) => {
         </div>
       </div>
       <div>
-        <p>total</p>
+        <p>{quantity * amount}</p>
       </div>
     </div>
   );
