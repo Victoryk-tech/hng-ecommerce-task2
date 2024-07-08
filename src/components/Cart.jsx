@@ -30,26 +30,26 @@ const Cart = () => {
         })}
 
         <div className="flex flex-row items-center justify-between w-full">
-          <button className="border-[#FF8933] hover:bg-[#FF8933] border-[1px] text-[#FF8933]  text-center hover:text-white py-4 md:py-[40px] px-5 w-[37%] md:w-[15%] font-semibold text-[12px]">
+          <button className="border-[#FF8933] hover:bg-[#FF8933] border-[1px] text-[#FF8933]  text-center hover:text-white py-4 md:py-5 lg:py-[40px] px-5 w-[37%] md:w-[30%] lg:w-[15%] font-semibold text-[12px]">
             Return to Shop
           </button>
-          <button className="bg-[#FF8933] text-center text-white py-4 md:py-[13px] px-5 w-[37%] md:w-[40%] font-semibold text-[12px]">
+          <button className="bg-[#FF8933] text-center text-white py-4 md:py-5 lg:py-[13px] px-5 w-[37%] md:w-[30%] lg:w-[40%] font-semibold text-[12px]">
             Update Cart
           </button>
         </div>
         <div className=" flex flex-col md:flex-row items-start justify-between pt-16 w-full">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-4 w-full md:w-[75%] ">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-4 w-full md:w-[60%] lg:w-[75%] ">
             <input
               type="text"
               placeholder="Coupon code"
               className="p-3 md::py-2 w-[100%] lg:w-[35%] border-black border-[1px] text-[15px]"
             />
-            <button className="bg-[#FF8933] text-center text-white py-4 md:py-[15px] px-5 w-[100%] md:w-[20%] font-semibold text-[12px]">
+            <button className="bg-[#FF8933] text-center text-white py-4 md:py-[15px] px-5 w-[100%] md:w-[70%] lg:w-[20%] font-semibold text-[12px]">
               Apply Coupon
             </button>
           </div>
 
-          <div className="border-2 p-2 w-full my-14 md:mt-0 md:w-[25%] border-black">
+          <div className="border-2 p-2 w-full my-14 md:mt-0 md:w-[35%] border-black">
             <div className="flex items-start justify-between border-b-[0.3px] border-black py-4">
               <p className="font-poppin font-normal text-[16px]">Subtotal</p>
               <p className="font-poppin font-normal text-[16px]">
