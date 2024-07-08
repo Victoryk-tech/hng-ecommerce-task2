@@ -20,15 +20,28 @@ const Main = () => {
           Explore Our Products
         </h1>
       </div>
-      <div className="hidden md:flex items-start justify-start space-x-4 text-center">
-        <p className="font-poppin font-normal text-[16px]">Chair</p>
-        <p className="font-poppin font-normal text-[16px]">Dinning Set</p>
-        <p className="font-poppin font-normal text-[16px]">Sofa</p>
-        <p className="font-poppin font-normal text-[16px]">Side Table</p>
-        <p className="font-poppin font-normal text-[16px]">Accessories</p>
+      <div className="hidden md:flex items-start justify-start gap-x-4 text-center">
+        <p className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out">
+          All
+        </p>
+        <p className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out">
+          Chairs
+        </p>
+        <p className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out">
+          Dinning set
+        </p>
+        <p className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out">
+          Sofa
+        </p>
+        <p className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out">
+          Side Table
+        </p>
+        <p className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out">
+          Accessories
+        </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start gap-y-20 md:gap-y-6 lg:gap-0 py-6 ">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start lg:mt-20 gap-y-20 md:gap-y-6 lg:gap-0 py-6 ">
         {products.slice(0, visible).map((product, index) => {
           return (
             <div>
