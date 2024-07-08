@@ -31,8 +31,11 @@ const Header = () => {
             </Link>
           </nav>
           <div className="flex items-center justify-center space-x-2">
-            <div className=" md:pr-2 bg-[#fafafa] hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-1 md:pl-3">
-              <input type="text" className="outline-none bg-none py-2 w-6" />
+            <div className="  md:pr-3 bg-[#fafafa] hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-1 md:pl-3">
+              <input
+                type="text"
+                className="outline-none bg-none py-2 w-56 md:w-36 lg:w-9"
+              />
               <img
                 src={search}
                 className="text-[20px] hover:text-[#FF8933] hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)]"
