@@ -32,7 +32,7 @@ const Flash = () => {
       </div>
       <div className="pt-6">
         <button
-          className="bg-[#FF8933] text-white py-3 px-5 w-[60%] md:w-[50%] lg:w-[20%] font-semibold text-[16px]"
+          className="bg-[#FF8933] text-white py-3 px-5 w-[60%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
           onClick={showVisible}
         >
           View all Products
