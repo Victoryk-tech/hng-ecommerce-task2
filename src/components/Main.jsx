@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 import MainProducts from "./products/MainProducts";
 import products from "./database/mainProduct";
 
 const Main = () => {
+  const [visible, setVisible] = useState(4);
+  const showMore = () => {
+    setVisible((prevValue) => prevValue + 4);
+  };
   return (
     <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 pb-10 w-full">
       <div className="space-y-5">
@@ -25,7 +29,7 @@ const Main = () => {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start gap-4 py-8">
-        {products.map((product, index) => {
+        {products.slice(0, visible).map((product, index) => {
           return (
             <div>
               <MainProducts key={index} Product={product} />
@@ -37,6 +41,7 @@ const Main = () => {
         <a
           href="#"
           className="bg-[#FF8933] text-white py-3 px-5 w-[60%] md:w-[60%] lg:w-[70%] font-semibold text-[16px]"
+          onClick={showMore}
         >
           Load more
         </a>

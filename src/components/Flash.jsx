@@ -6,6 +6,10 @@ import Timer from "./Timer";
 import ViewBtn from "../shared/ViewBtn";
 
 const Flash = () => {
+  const [show, setShow] = useState(4);
+  const showMore = () => {
+    setShow((prevValue) => prevValue + 2);
+  };
   return (
     <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-4 w-full">
       <div className="w-full space-y-6">
@@ -17,7 +21,7 @@ const Flash = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start gap-4 py-6">
-          {items.map((item, index) => {
+          {items.slice(0, show).map((item, index) => {
             return (
               <div>
                 <FlashSales key={index} Item={item} />
@@ -26,7 +30,7 @@ const Flash = () => {
           })}
         </div>
       </div>
-      <ViewBtn />
+      <ViewBtn onClick={showMore} />
     </div>
   );
 };
