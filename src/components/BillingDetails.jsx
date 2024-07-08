@@ -2,8 +2,8 @@ import React from "react";
 
 const BillingDetails = () => {
   return (
-    <div className=" pl-8 space-y-10">
-      <h1 className="font-inter text-[36px] font-medium text-start">
+    <div className=" lg:pl-8 gap-10 pb-10 md-pb-0">
+      <h1 className="font-inter text-[28px] lg:text-[36px] font-medium text-start pb-8">
         Billing Details
       </h1>
 
@@ -72,9 +72,9 @@ const BillingDetails = () => {
           />
         </div>
       </form>
-      <div className="flex items-center justify-start gap-2 text-start">
+      <div className="flex items-center justify-start gap-2 py-4 text-start">
         <input type="checkbox" className="bg-[#FF8933]" />
-        <p className="text-[16px] font-normal">
+        <p className="lg:text-[16px] text-[13px] font-normal">
           Save this information for faster check-out next time
         </p>
       </div>

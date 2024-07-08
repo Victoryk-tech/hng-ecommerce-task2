@@ -22,14 +22,17 @@ const Header = () => {
             </div>
           </Link>
 
-          <nav className="hidden md:block md:space-x-5 lg:space-x-10 text-[16px] font-normal">
+          <nav className="hidden md:block md:space-x-8 lg:space-x-10 text-[16px] font-normal">
             <a href="#">Shop</a>
             <a href="#">New in</a>
-            <a href="#">Best Seller</a>
+            <Link to="checkout">
+              {" "}
+              <a href="#">Best Seller</a>
+            </Link>
           </nav>
           <div className="flex items-center justify-center space-x-2">
-            <div className="pr-2 bg-[#fafafa] hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-1 md:pl-3">
-              <input type="text" className="outline-none bg-none py-2" />
+            <div className=" md:pr-2 bg-[#fafafa] hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-1 md:pl-3">
+              <input type="text" className="outline-none bg-none py-2 w-6" />
               <img
                 src={search}
                 className="text-[20px] hover:text-[#FF8933] hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)]"

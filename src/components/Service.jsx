@@ -4,7 +4,7 @@ import customer from "../assets/customer.png";
 import tick from "../assets/tick.png";
 const Service = () => {
   return (
-    <div className="space-y-10 md:space-y-0 md:space-x-6  flex flex-col md:flex md:flex-row items-center text-center justify-center md:justify-between px-2 md:px-4 lg:px-20 lg:py-20 md:py-10 py-16 w-full  ">
+    <div className="gap-10 md:pt-[12rem]  flex flex-col md:flex md:flex-row items-center text-center justify-center md:justify-between px-2 md:px-4 lg:px-20 lg:pb-20 md:pb-10 pb-16 w-full  ">
       <div className="flex flex-col items-center justify-center space-y-4">
         <div className="rounded-[50%] bg-[#5B3702] text-white p-2">
           <img src={delivery} alt="" />

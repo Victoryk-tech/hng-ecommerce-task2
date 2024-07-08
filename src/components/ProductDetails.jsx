@@ -37,7 +37,7 @@ const ProductDetails = () => {
             <p className="font-poppin font-normal text-[14px]">{description}</p>
           </div>
           <div className="flex items-start justify-between">
-            <div className=" flex">
+            <div className=" flex border-black border-[1px]">
               <p>-</p>
               <p>2</p>
               <p>+</p>
