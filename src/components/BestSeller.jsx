@@ -7,7 +7,7 @@ import ViewBtn from "../shared/ViewBtn";
 const BestSeller = () => {
   const [visible, setVisible] = useState(4);
   const showMore = () => {
-    setVisible((prevValue) => prevValue + 2);
+    setVisible((prevValue) => prevValue + 4);
   };
   return (
     <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-28 w-full">

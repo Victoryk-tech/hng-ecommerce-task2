@@ -8,7 +8,7 @@ import ViewBtn from "../shared/ViewBtn";
 const Flash = () => {
   const [show, setShow] = useState(4);
   const showMore = () => {
-    setShow((prevValue) => prevValue + 2);
+    setShow((prevValue) => prevValue + 4);
   };
   return (
     <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 py-4 w-full">

@@ -5,6 +5,11 @@ import best4 from "../../assets/bestSellerD.png";
 import best5 from "../../assets/bestSellerE.png";
 import best6 from "../../assets/bestSellerF.png";
 import best7 from "../../assets/bestSellerG.png";
+import best8 from "../../assets/bestSellerH.png";
+import best9 from "../../assets/bestSellerI.png";
+import best10 from "../../assets/bestSellerJ.png";
+import best11 from "../../assets/bestSellerK.png";
+
 const bestSeller = [
   {
     id: 1,
@@ -57,6 +62,38 @@ const bestSeller = [
   {
     id: 7,
     image: best7,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 8,
+    image: best8,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 9,
+    image: best9,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 10,
+    image: best10,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 11,
+    image: best11,
     title: "Ezra  Chair",
     amount: 100,
     rating: 85,

@@ -4,6 +4,12 @@ import flash3 from "../../assets/flashC.png";
 import flash4 from "../../assets/flashD.png";
 import flash5 from "../../assets/flashE.png";
 import flash6 from "../../assets/flashF.png";
+import flash7 from "../../assets/flashG.png";
+import flash8 from "../../assets/flashH.png";
+import flash9 from "../../assets/flashI.png";
+import flash10 from "../../assets/flashJ.png";
+import flash11 from "../../assets/flashK.png";
+import flash12 from "../../assets/flashL.png";
 const discount = [
   {
     id: 1,
@@ -48,6 +54,54 @@ const discount = [
   {
     id: 6,
     image: flash6,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 7,
+    image: flash7,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 8,
+    image: flash8,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 9,
+    image: flash9,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 10,
+    image: flash10,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 11,
+    image: flash11,
+    title: "Ezra  Chair",
+    amount: 100,
+    rating: 85,
+    oldprice: 160,
+  },
+  {
+    id: 12,
+    image: flash12,
     title: "Ezra  Chair",
     amount: 100,
     rating: 85,
