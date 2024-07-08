@@ -4,7 +4,7 @@ import Details from "../components/Details";
 
 const Checkout = () => {
   return (
-    <div className="py-8 px-2 lg:px-24 bg-[#fafafa]">
+    <div className="py-8 px-2 md:px-4 lg:px-24 bg-[#fafafa]">
       <div className="text-[11px] flex items-start justify-start font-poppin font-normal md:text-[16px] gap-1 lg:space-x-3 pb-10">
         <p>Home</p>
         <p>/</p>

@@ -14,7 +14,7 @@ const BillingDetails = () => {
           </label>
           <input
             type="text"
-            className="outline-none py-2 pl-2 pr-32 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
+            className="outline-none py-2 pl-2 pr-20 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
           />
         </div>
         <div className="space-y-2 flex flex-col  items-start justify-start">
@@ -23,7 +23,7 @@ const BillingDetails = () => {
           </label>
           <input
             type="text"
-            className="outline-none py-2 pl-2 pr-32 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
+            className="outline-none py-2 pl-2 pr-20 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
           />
         </div>
         <div className="space-y-2 flex flex-col  items-start justify-start">
@@ -32,7 +32,7 @@ const BillingDetails = () => {
           </label>
           <input
             type="text"
-            className="outline-none py-2 pl-2 pr-32 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
+            className="outline-none py-2 pl-2 pr-20 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
           />
         </div>
         <div className="space-y-2 flex flex-col  items-start justify-start">
@@ -41,7 +41,7 @@ const BillingDetails = () => {
           </label>
           <input
             type="text"
-            className="outline-none py-2 pl-2 pr-32 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
+            className="outline-none py-2 pl-2 pr-20 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
           />
         </div>
         <div className="space-y-2 flex flex-col  items-start justify-start">
@@ -50,7 +50,7 @@ const BillingDetails = () => {
           </label>
           <input
             type="text"
-            className="outline-none py-2 pl-2 pr-32 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
+            className="outline-none py-2 pl-2 pr-20 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
           />
         </div>
         <div className="space-y-2 flex flex-col  items-start justify-start">
@@ -59,7 +59,7 @@ const BillingDetails = () => {
           </label>
           <input
             type="Number"
-            className="outline-none py-2 pl-2 pr-32 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
+            className="outline-none py-2 pl-2 pr-20 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
           />
         </div>
         <div className="space-y-2 flex flex-col  items-start justify-start">
@@ -68,7 +68,7 @@ const BillingDetails = () => {
           </label>
           <input
             type="Email"
-            className="outline-none py-2 pl-2 pr-32 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
+            className="outline-none py-2 pl-2 pr-20 md:pr-36 lg:pr-40 bg-[#f5f5f5]"
           />
         </div>
       </form>
