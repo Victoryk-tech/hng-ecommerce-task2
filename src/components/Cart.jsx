@@ -1,19 +1,26 @@
 import React, { useContext } from "react";
 import { CartContext } from "./context/ContextProvider";
 import CartProduct from "./products/CartProduct";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cartState } = useContext(CartContext);
   console.log(cartState.cart);
   return (
-    <div className="w-full h-full px-20 py-10">
-      <nav className="flex items-start justify-between text-center">
+    <div className="w-full h-full px-2 md:px-4 lg:px-20 py-10">
+      <div className="text-[11px] flex items-start justify-start font-poppin font-normal md:text-[16px] gap-1 lg:space-x-3 pb-10">
+        <p>Home</p>
+        <p>/</p>
+
+        <p>Cart</p>
+      </div>
+      <nav className="flex items-start justify-between text-center p-4 shadow-[0_7px_25px_rgba(0,0,0,0.08)]">
         <p>Product</p>
         <p>Price</p>
         <p>Quantity</p>
         <p>Subtotal</p>
       </nav>
-      <div className="">
+      <div className="pt-5  w-full">
         {cartState.cart.map((item, index) => {
           return (
             <div>
@@ -22,10 +29,48 @@ const Cart = () => {
           );
         })}
 
-        <div className="p-8">
-          <p>Total items:{cartState.totalQuantity}</p>
-          <p>Total Price:{cartState.totalPrice.toLocaleString()}</p>
-          <button>Checkout</button>
+        <div className="flex flex-row items-center justify-between w-full">
+          <button className="border-[#FF8933] hover:bg-[#FF8933] border-[1px] text-[#FF8933]  text-center hover:text-white py-4 md:py-[40px] px-5 w-[37%] md:w-[15%] font-semibold text-[12px]">
+            Return to Shop
+          </button>
+          <button className="bg-[#FF8933] text-center text-white py-4 md:py-[13px] px-5 w-[37%] md:w-[40%] font-semibold text-[12px]">
+            Update Cart
+          </button>
+        </div>
+        <div className=" flex flex-col md:flex-row items-start justify-between pt-16 w-full">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-4 w-full md:w-[75%] ">
+            <input
+              type="text"
+              placeholder="Coupon code"
+              className="p-3 md::py-2 w-[100%] lg:w-[35%] border-black border-[1px] text-[15px]"
+            />
+            <button className="bg-[#FF8933] text-center text-white py-4 md:py-[15px] px-5 w-[100%] md:w-[20%] font-semibold text-[12px]">
+              Apply Coupon
+            </button>
+          </div>
+
+          <div className="border-2 p-2 w-full my-14 md:mt-0 md:w-[25%] border-black">
+            <div className="flex items-start justify-between border-b-[0.3px] border-black py-4">
+              <p className="font-poppin font-normal text-[16px]">Subtotal</p>
+              <p className="font-poppin font-normal text-[16px]">
+                {cartState.totalQuantity}
+              </p>
+            </div>
+            <div className="flex items-start justify-between border-b-[0.3px] border-black py-4">
+              <p className="font-poppin font-normal text-[16px]">Shipping</p>
+              <p className="font-poppin font-normal text-[13px]">Free</p>
+            </div>
+            <div className="flex items-start justify-between py-4">
+              <p className="font-poppin font-normal text-[16px]">total:</p>
+              <p className="font-poppin font-normal text-[16px]">
+                {cartState.totalPrice.toLocaleString()}
+              </p>
+            </div>
+
+            <button className="bg-[#FF8933] text-center ml-20 md:ml-8  text-white hover:text-[#FF8933] hover:bg-white hover:border-[1px] hover:border-[#FF8933] py-4 md:py-[13px] px-4 w-[53%] md:w-[75%] font-semibold text-[12px]">
+              <Link to="/checkout">Procced to checkout</Link>
+            </button>
+          </div>
         </div>
       </div>
     </div>

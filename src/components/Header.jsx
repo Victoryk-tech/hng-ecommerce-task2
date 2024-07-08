@@ -25,16 +25,14 @@ const Header = () => {
           <nav className="hidden md:block md:space-x-8 lg:space-x-10 text-[16px] font-normal">
             <a href="#">Shop</a>
             <a href="#">New in</a>
-            <Link to="checkout">
-              {" "}
-              <a href="#">Best Seller</a>
-            </Link>
+
+            <a href="#">Best Seller</a>
           </nav>
           <div className="flex items-center justify-center space-x-2">
             <div className="  md:pr-3 bg-[#fafafa] hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-1 md:pl-3">
               <input
                 type="text"
-                className="outline-none bg-none py-2 w-56 md:w-36 lg:w-9"
+                className="outline-none bg-none py-2 w-56 md:w-40 lg:w-44"
               />
               <img
                 src={search}

@@ -26,13 +26,15 @@ const CartProduct = ({ cartItems }) => {
     dispatch({ type: "Remove_From_Cart", payload: item });
   };
   return (
-    <div className="flex items-start justify-between text-center text-black">
-      <div>
-        <img src={image} alt="" className="w-32 h-28" />
-        <p>{title}</p>
+    <div className="flex items-center justify-between text-center p-4 shadow-[0_7px_25px_rgba(0,0,0,0.08)] w-full">
+      <div className="gap-4">
+        <div className="w-16 h-16">
+          <img src={image} alt="" className="w-full h-full object-contain" />
+        </div>
+        <p className="font-poppin font-semibold text-[16px]">{title}</p>
       </div>
       <div>
-        <p>{amount}</p>
+        <p className="font-poppin font-semibold text-[16px]">{amount}</p>
       </div>
 
       <div className="flex items-center justify-center border-black border-[1px] p-1 space-x-2">
@@ -41,9 +43,9 @@ const CartProduct = ({ cartItems }) => {
           <img src={dropup} alt="" onClick={() => IncreaseCart(cartItems)} />
           <img src={dropdown} alt="" onClick={() => DecreaseCart(cartItems)} />
         </div>
-        <div>
-          <p>total</p>
-        </div>
+      </div>
+      <div>
+        <p>total</p>
       </div>
     </div>
   );
