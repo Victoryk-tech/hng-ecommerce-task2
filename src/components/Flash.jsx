@@ -3,8 +3,6 @@ import items from "../components/database/flashProduct";
 import FlashSales from "./products/FlashSales";
 
 import Timer from "./Timer";
-import ViewBtn from "../shared/ViewBtn";
-import CountDown from "./CountDown";
 
 const Flash = () => {
   const [show, setShow] = useState(4);

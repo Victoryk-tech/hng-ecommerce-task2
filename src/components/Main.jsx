@@ -21,7 +21,10 @@ const Main = () => {
         </h1>
       </div>
       <div className="hidden md:flex items-start justify-start gap-x-4 text-center">
-        <p className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out">
+        <p
+          className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out"
+          onClick={showMore}
+        >
           All
         </p>
         <p className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out">

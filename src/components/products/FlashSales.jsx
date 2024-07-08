@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import fivestar from "../../assets/fivestar.png";
-import heartsmall from "../../assets/heartsmall.png";
+
 import discount from "../../assets/discount.png";
 import { BsBag } from "react-icons/bs";
+import { CartContext } from "../context/ContextProvider";
 const FlashSales = ({ Item }) => {
+  const { dispatch } = useContext(CartContext);
   const { rating, oldprice, amount, title, image } = Item;
   const addToCart = (item) => {
     dispatch({ type: "Add_To_Cart", payload: item });
@@ -23,7 +25,7 @@ const FlashSales = ({ Item }) => {
           <h2 className="text-[14px] md:text-[16px] font-medium">{title}</h2>
           <p
             className="text-[20px] text-center font-[900] bg-[#FF8933] p-[10px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
-            onClick={() => addToCart(Product)}
+            onClick={() => addToCart(Item)}
           >
             <BsBag />
           </p>
