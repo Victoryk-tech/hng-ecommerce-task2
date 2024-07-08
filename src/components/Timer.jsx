@@ -1,42 +1,25 @@
 import React, { useEffect, useRef, useState } from "react";
 
+const COUNTDOWN_TARGET = new Date("June 10,2024 00:00:00");
+const getTimeLeft = () => {
+  const totalTimeLeft = COUNTDOWN_TARGET - new Date();
+  const days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
+  const seconds = Math.floor((totalTimeLeft / 1000) % 60);
+  return { days, hours, minutes, seconds };
+};
+
 const Timer = () => {
-  const [timerDays, setTimerDays] = useState("00");
-  const [timerHours, setTimerHours] = useState("00");
-  const [timerMinutes, setTimerMinutes] = useState("00");
-  const [timerSecs, setTimerSecs] = useState("00");
+  const [timeLeft, setTimeLeft] = useState(() => getTimeLeft());
 
-  let interval = useRef(); //store the timing because its mutable(manipulatable)
-
-  const startTimer = () => {
-    const countDownDate = new Date("July 1,2024 00:00:00").getTime(); // this is where our time will start counting from
-    interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      if (distance < 0) {
-        //stop our timer
-        clearInterval(interval.current);
-      } else {
-        // update our timer
-        setTimerDays(days);
-        setTimerHours(hours);
-        setTimerMinutes(minutes);
-        setTimerSecs(seconds);
-      }
-    }, 1000);
-  };
   useEffect(() => {
-    startTimer();
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeLeft());
+    }, 1000);
+
     return () => {
-      clearInterval(interval.current);
+      clearInterval(timer);
     };
   }, []);
   return (
@@ -45,7 +28,7 @@ const Timer = () => {
         <p className="font-medium text-[12px]">
           <small>Days</small>
         </p>
-        <p className="font-bold text-[24px] lg:text-[32px]">{timerDays}</p>
+        <p className="font-bold text-[24px] lg:text-[32px]">{timeLeft.days}</p>
       </div>
       <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-3 lg:pt-5 px-3">
         :
@@ -54,7 +37,7 @@ const Timer = () => {
         <p className="font-medium text-[12px]">
           <small>Hours</small>
         </p>
-        <p className="font-bold text-[24px] lg:text-[32px]">{timerHours}</p>
+        <p className="font-bold text-[24px] lg:text-[32px]">{timeLeft.hours}</p>
       </div>
       <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-3 lg:pt-5 px-3">
         :
@@ -63,7 +46,9 @@ const Timer = () => {
         <p className="font-medium text-[12px]">
           <small>Minutes</small>
         </p>
-        <p className="font-bold text-[24px] lg:text-[32px]">{timerMinutes}</p>
+        <p className="font-bold text-[24px] lg:text-[32px]">
+          {timeLeft.minutes}
+        </p>
       </div>
       <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-3 lg:pt-5 px-3">
         :
@@ -72,7 +57,9 @@ const Timer = () => {
         <p className="font-medium text-[12px]">
           <small>Seconds</small>
         </p>
-        <p className="font-bold text-[24px] lg:text-[32px]">{timerSecs}</p>
+        <p className="font-bold text-[24px] lg:text-[32px]">
+          {timeLeft.seconds}
+        </p>
       </div>
     </div>
   );
