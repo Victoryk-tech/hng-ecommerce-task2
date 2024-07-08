@@ -47,7 +47,7 @@ const Timer = () => {
         </p>
         <p className="font-bold text-[24px] lg:text-[32px]">{timerDays}</p>
       </div>
-      <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-5 px-3">
+      <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-3 lg:pt-5 px-3">
         :
       </span>
       <div className="flex flex-col items-center">
@@ -56,7 +56,7 @@ const Timer = () => {
         </p>
         <p className="font-bold text-[24px] lg:text-[32px]">{timerHours}</p>
       </div>
-      <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-5 px-3">
+      <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-3 lg:pt-5 px-3">
         :
       </span>
       <div className="flex flex-col items-center">
@@ -65,7 +65,7 @@ const Timer = () => {
         </p>
         <p className="font-bold text-[24px] lg:text-[32px]">{timerMinutes}</p>
       </div>
-      <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-5 px-3">
+      <span className="text-[#FF8933] text-3xl flex justify-center items-center pt-3 lg:pt-5 px-3">
         :
       </span>
       <div className="flex flex-col items-center">

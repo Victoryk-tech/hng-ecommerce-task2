@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { cartContext } from "../context/ContextProvider";
+import { CartContext } from "../context/ContextProvider";
 import dropup from "../../assets/dropUP.png";
 import dropdown from "../../assets/dropDown.png";
 
 const CartProduct = ({ cartItems }) => {
   const { amount, title, image, quantity } = cartItems;
-
-  const { dispatch } = useContext(cartContext);
+  //console.log(amount);
+  const { dispatch } = useContext(CartContext);
 
   const IncreaseCart = (item) => {
     dispatch({

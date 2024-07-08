@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { cartContext } from "./context/ContextProvider";
+import { CartContext } from "./context/ContextProvider";
 import CartProduct from "./products/CartProduct";
 
 const Cart = () => {
-  const { cartState } = useContext(cartContext);
+  const { cartState } = useContext(CartContext);
+  console.log(cartState.cart);
   return (
     <div className="w-full h-full px-20 py-10">
       <nav className="flex items-start justify-between text-center">

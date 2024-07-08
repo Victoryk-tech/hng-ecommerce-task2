@@ -1,8 +1,5 @@
 import React from "react";
-import code from "../assets/code.png";
-import google from "../assets/google.png";
-import app from "../assets/appStore.png";
-import media from "../assets/media.png";
+
 import send from "../assets/sendicon.png";
 const Footer = () => {
   return (

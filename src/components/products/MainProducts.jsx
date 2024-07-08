@@ -1,20 +1,23 @@
 import React, { useContext } from "react";
 import addCart from "../../assets/cart.png";
 import fivestar from "../../assets/fivestar.png";
-import { cartContext } from "../context/ContextProvider";
+import { CartContext } from "../context/ContextProvider";
 import products from "../database/mainProduct";
+import { Link } from "react-router-dom";
 
 const MainProducts = ({ Product }) => {
-  const { cartState, dispatch } = useContext(cartContext);
-  const { rating, oldprice, amount, title, image } = Product;
+  const { cartState, dispatch } = useContext(CartContext);
+  const { rating, oldprice, amount, title, image, id } = Product;
   // Function to add item to cart
   const addToCart = (item) => {
     dispatch({ type: "Add_To_Cart", payload: item });
   };
   return (
-    <div className="flex flex-col justify-start items-start p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[11.2rem] lg:w-64 h-[16rem] md:w-[15rem] md:h-60 lg:h-[19rem] hover:scale-95 ease-in-out transition-all">
+    <div className="flex flex-col justify-start items-start  hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white gap-4 py-2 px-1 rounded-sm w-[11.2rem] lg:w-60 h-[16rem] md:w-[14rem] md:h-60 lg:h-[15rem] hover:scale-95 ease-in-out transition-all">
       <div className="flex items-center justify-center w-full h-1/2 ">
-        <img src={image} alt="" className="w-full h-full object-contain" />
+        <Link to={`productDetails/${(Product, id)}`}>
+          <img src={image} alt="" className="w-full h-full object-contain" />
+        </Link>
       </div>
 
       <div className=" w-full h-1/3  space-y-2 px-1">

@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
-import love from "../assets/vec.png";
+
 import { Link } from "react-router-dom";
-import { cartContext } from "./context/ContextProvider";
+import { CartContext } from "./context/ContextProvider";
 import TopNav from "./TopNav";
-import menu from "../assets/menu.png";
+
 import search from "../assets/search.png";
-import user from "../assets/user.png";
+
 const Header = () => {
-  const { cartState } = useContext(cartContext);
+  const { cartState } = useContext(CartContext);
   return (
     <div className=" flex flex-col items-start justify-start w-full h-auto sticky top-0 z-[999]">
       <TopNav />
@@ -28,9 +28,12 @@ const Header = () => {
             <a href="#">Best Seller</a>
           </nav>
           <div className="flex items-center justify-center space-x-2">
-            <div className="hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-3">
+            <div className="hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-1 md:pl-3">
               <input type="text" className="outline-none bg-none py-2" />
-              <img src={search} className="text-[20px] hover:text-[#FF8933]" />
+              <img
+                src={search}
+                className="text-[20px] hover:text-[#FF8933] hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)]"
+              />
             </div>
             <Link to="/cart" className="relative">
               {" "}

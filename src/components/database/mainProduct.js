@@ -16,6 +16,8 @@ const products = [
     rating: 65,
     oldprice: 1240,
     quantity: 2,
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 2,
@@ -25,6 +27,8 @@ const products = [
     rating: 65,
     oldprice: 1340,
     quantity: 2,
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 3,
@@ -34,6 +38,8 @@ const products = [
     rating: 70,
     oldprice: 1340,
     quantity: 2,
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 4,
@@ -43,6 +49,8 @@ const products = [
     rating: 70,
     oldprice: 1340,
     quantity: 2,
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 5,
@@ -52,6 +60,8 @@ const products = [
     rating: 70,
     oldprice: 1400,
     quantity: 2,
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 6,
@@ -61,6 +71,8 @@ const products = [
     rating: 70,
     oldprice: 1340,
     quantity: 2,
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 7,
@@ -70,6 +82,8 @@ const products = [
     rating: 70,
     oldprice: 1340,
     quantity: 2,
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 8,
@@ -79,6 +93,8 @@ const products = [
     rating: 70,
     oldprice: 1340,
     quantity: 2,
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
 ];
 

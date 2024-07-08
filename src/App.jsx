@@ -10,6 +10,7 @@ import Checkout from "./Pages/Checkout";
 import Header from "./components/Header";
 
 import Footer from "./components/Footer";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </Route>
           <Route path="cart" element={<CartPage />} />
           <Route path="checkout" element={<Checkout />} />
+          <Route path="productDetails/:id" element={<ProductDetails />} />
         </Routes>
 
         <Footer />
