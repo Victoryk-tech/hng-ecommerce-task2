@@ -11,7 +11,7 @@ const ProductDetails = () => {
   const { amount, title, image, quantity, description, oldprice, rating } =
     items;
   return (
-    <div className="w-full h-auto pl-16 py-10 space-y-10">
+    <div className="w-full h-auto px-2 lg:pl-16 py-10 gap-3">
       <div className="flex items-start justify-start font-poppin font-normal text-[16px] space-x-3 pb-10">
         <p>Home</p>
         <p>/</p>
@@ -22,11 +22,11 @@ const ProductDetails = () => {
 
         <p>{title}</p>
       </div>
-      <div className="flex items-center justify-between">
-        <div className="w-[90%] h-[90%]">
+      <div className="flex flex-col  md:flex-row items-start md:items-center justify-center md:justify-between ">
+        <div className="w-full h-full lg:w-[90%] lg:h-[90%]">
           <img src={image} alt="" className="w-full h-full object-contain" />
         </div>
-        <div className="flex flex-col items-start justify-start px-48 space-y-5">
+        <div className="flex flex-col items-start justify-start lg:px-48 space-y-5">
           <div>
             <p className="font-inter font-semibold text-[24px]">{title}</p>
             <div></div>
@@ -58,17 +58,17 @@ const ProductDetails = () => {
           </h1>
         </div>
 
-        <div className="grid grid-cols-4 items-center justify-center lg:px-32 py-12 w-full ">
-          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[10.2rem] lg:w-48 h-[16rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
-            <div className="w-36 h-36">
+        <div className="grid grid-cols-2 md:grid-cols-4 items-center justify-center px-2 lg:px-28 py-12 w-full gap-4">
+          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[12rem] lg:w-60 h-[15rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
+            <div className="w-36 h-1/2">
               <img
                 src={image}
                 alt=""
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] space-y-2">
-              <div className="flex items-start justify-between space-x-10">
+            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] gap-3">
+              <div className="flex items-start justify-between gap-10">
                 <p className="font-poppin text-[16px] font-medium">{title}</p>
                 <img
                   src={cart}
@@ -91,16 +91,16 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[10.2rem] lg:w-48 h-[16rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
-            <div className="w-36 h-36">
+          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[12rem] lg:w-60 h-[15rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
+            <div className="w-36 h-1/2">
               <img
                 src={image}
                 alt=""
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] space-y-2">
-              <div className="flex items-start justify-between space-x-10">
+            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] gap-3">
+              <div className="flex items-start justify-between gap-10">
                 <p className="font-poppin text-[16px] font-medium">{title}</p>
                 <img
                   src={cart}
@@ -123,16 +123,16 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[10.2rem] lg:w-48 h-[16rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
-            <div className="w-36 h-36">
+          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[12rem] lg:w-60 h-[15rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
+            <div className="w-36 h-1/2">
               <img
                 src={image}
                 alt=""
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] space-y-2">
-              <div className="flex items-start justify-between space-x-10">
+            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] gap-3">
+              <div className="flex items-start justify-between gap-10">
                 <p className="font-poppin text-[16px] font-medium">{title}</p>
                 <img
                   src={cart}
@@ -155,16 +155,16 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[10.2rem] lg:w-48 h-[16rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
-            <div className="w-36 h-36">
+          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[12rem] lg:w-60 h-[15rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
+            <div className="w-36 h-1/2">
               <img
                 src={image}
                 alt=""
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] space-y-2">
-              <div className="flex items-start justify-between space-x-10">
+            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] gap-3">
+              <div className="flex items-start justify-between gap-10">
                 <p className="font-poppin text-[16px] font-medium">{title}</p>
                 <img
                   src={cart}
