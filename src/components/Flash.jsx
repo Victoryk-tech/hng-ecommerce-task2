@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import items from "../components/database/flashProduct";
 import FlashSales from "./products/FlashSales";
 
@@ -7,7 +7,7 @@ import ViewBtn from "../shared/ViewBtn";
 
 const Flash = () => {
   const [show, setShow] = useState(4);
-  const showMore = () => {
+  const showVisible = () => {
     setShow((prevValue) => prevValue + 4);
   };
   return (
@@ -30,7 +30,15 @@ const Flash = () => {
           })}
         </div>
       </div>
-      <ViewBtn onClick={showMore} />
+      <div className="pt-6">
+        <a
+          href="#"
+          className="bg-[#FF8933] text-white py-3 px-5 w-[60%] md:w-[60%] lg:w-[70%] font-semibold text-[16px]"
+          onClick={showVisible}
+        >
+          View all Products
+        </a>
+      </div>
     </div>
   );
 };
