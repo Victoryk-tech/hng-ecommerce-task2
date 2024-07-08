@@ -10,26 +10,25 @@ const FlashSales = ({ Item }) => {
     dispatch({ type: "Add_To_Cart", payload: item });
   };
   return (
-    <div className="flex flex-col justify-start items-start p-2 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[11.2rem] lg:w-60 h-[14rem] md:w-[15rem] md:h-60 lg:h-[15rem] hover:scale-95 ease-in-out transition-all">
-      <div className="w-full flex items-start justify-between">
+    <div className="flex flex-col justify-start items-start bg-white rounded-sm shadow-sm hover:shadow-lg w-[187px] lg:w-[243px] h-[215px] md:w-[223px] md:h-[312px] lg:h-[360px] hover:scale-95 ease-in-out transition-all">
+      <div className="w-full flex items-start justify-start  p-2">
         <img src={discount} alt="" />
-        <img src={heartsmall} alt="" />
       </div>
-      <div className="flex items-center justify-center w-full h-1/2 ">
+      <div className="flex items-center justify-center md:w-[165px] w-[109px] h-[119px] lg:w-[195px] md:h-1/2 md:mb-2 lg:mb-9">
         <img src={image} alt="" className="w-full h-full object-contain" />
       </div>
 
-      <div className=" w-full h-1/3  space-y-2 px-1">
+      <div className=" w-full bg-[#F5F5F5] p-2">
         <div className="flex items-start justify-between">
           <h2 className="text-[14px] md:text-[16px] font-medium">{title}</h2>
           <p
-            className="text-[20px] text-center font-[900] bg-[#FF8933] p-[11px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
+            className="text-[20px] text-center font-[900] bg-[#FF8933] p-[10px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
             onClick={() => addToCart(Product)}
           >
             <BsBag />
           </p>
         </div>
-        <div className="flex items-start justify-start space-x-3">
+        <div className="flex items-start justify-start gap-3">
           <p className="text-[14px] md:text-[16px] text-[#bd9b9b]">${amount}</p>
           <p className="text-[14px] md:text-[16px]">{oldprice}</p>
         </div>

@@ -28,7 +28,7 @@ const Main = () => {
         <p className="font-poppin font-normal text-[16px]">Accessories</p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start gap-4 lg:gap-0 pt-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start gap-y-20 md:gap-y-6 lg:gap-0 py-6 ">
         {products.slice(0, visible).map((product, index) => {
           return (
             <div>
@@ -37,12 +37,12 @@ const Main = () => {
           );
         })}
       </div>
-      <div className="pt-6 w-full">
+      <div className="py-16 md:pt-2 lg:pt-6 ">
         <button
-          className="bg-[#FF8933] text-white py-3 px-5 hover:bg-transparent hover:text-[#FF8933] hover:border-[#FF8933] hover:border-[1px] transition-all ease-out w-[60%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
+          className="bg-[#FF8933] text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
           onClick={showMore}
         >
-          Load more
+          View all Products
         </button>
       </div>
     </div>

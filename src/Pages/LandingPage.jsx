@@ -12,7 +12,7 @@ import Main from "../components/Main";
 
 const LandingPage = () => {
   return (
-    <div className="w-full h-auto bg-[#F5F5F5] ">
+    <div className="w-full h-auto bg-[#F5F5F5] scroll-smooth">
       <Hero />
       <Flash />
       <BestSeller />
