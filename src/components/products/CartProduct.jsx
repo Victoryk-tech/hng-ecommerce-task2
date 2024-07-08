@@ -57,7 +57,7 @@ const CartProduct = ({ cartItems }) => {
         </div>
       </div>
       <div>
-        <p>{quantity * amount}</p>
+        <p>${`${parseFloat(quantity * amount).toLocaleString()}`}</p>
       </div>
     </div>
   );
