@@ -13,14 +13,14 @@ const MainProducts = ({ Product }) => {
     dispatch({ type: "Add_To_Cart", payload: item });
   };
   return (
-    <div className="flex flex-col justify-start items-start  hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white gap-4 py-2 px-1 rounded-sm w-[11.2rem] lg:w-60 h-[16rem] md:w-[14rem] md:h-60 lg:h-[15rem] hover:scale-95 ease-in-out transition-all">
+    <div className="flex flex-col justify-start items-start  hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white gap-3 py-3 px-1 rounded-sm w-[12rem] lg:w-60 h-[17rem] md:w-[14rem] md:h-60 lg:h-[15rem] hover:scale-95 ease-in-out transition-all">
       <div className="flex items-center justify-center w-full h-1/2 ">
         <Link to={`productDetails/${(Product, id)}`}>
           <img src={image} alt="" className="w-full h-full object-contain" />
         </Link>
       </div>
 
-      <div className=" w-full h-1/3  space-y-2 px-1">
+      <div className=" w-full h-1/3  space-y-2 px-1 pt-2">
         <div className="flex items-start justify-between">
           <h2 className="text-[14px] md:text-[16px] font-medium">{title}</h2>
           <img
