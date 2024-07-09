@@ -32,8 +32,8 @@ const MainProducts = ({ Product }) => {
           </p>
         </div>
         <div className="flex items-start justify-start gap-3">
-          <p className="text-[14px] md:text-[16px] text-[#bd9b9b]">${amount}</p>
-          <p className="text-[14px] md:text-[16px]">{oldprice}</p>
+          <p className="text-[14px] md:text-[16px] text-[#DB4444]">${amount}</p>
+          <p className="text-[14px] md:text-[16px] line-through">{oldprice}</p>
         </div>
         <div className="flex items-start justify-start">
           <img src={fivestar} alt="" />

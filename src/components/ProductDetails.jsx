@@ -89,7 +89,7 @@ const ProductDetails = () => {
               </div>
               <div className="flex items-start justify-start space-x-3">
                 <p className="font-poppin text-[16px] font-medium">${amount}</p>
-                <p className="font-poppin text-[16px] font-medium">
+                <p className="font-poppin text-[16px] font-medium line-through">
                   ${oldprice}
                 </p>
               </div>

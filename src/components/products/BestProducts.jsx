@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import addCart from "../../assets/cart.png";
-import fivestar from "../../assets/fivestar.png";
+import fivestar from "../../assets/halfstar.png";
 import { BsBag } from "react-icons/bs";
 import { CartContext } from "../context/ContextProvider";
 const BestProducts = ({ Best }) => {
@@ -26,8 +26,8 @@ const BestProducts = ({ Best }) => {
           </p>
         </div>
         <div className="flex items-start justify-start gap-3">
-          <p className="text-[14px] md:text-[16px] text-[#bd9b9b]">${amount}</p>
-          <p className="text-[14px] md:text-[16px]">{oldprice}</p>
+          <p className="text-[14px] md:text-[16px] text-[#DB4444]">${amount}</p>
+          <p className="text-[14px] md:text-[16px] line-through">{oldprice}</p>
         </div>
         <div className="flex items-start justify-start">
           <img src={fivestar} alt="" />
