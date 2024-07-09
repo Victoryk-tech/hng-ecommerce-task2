@@ -31,7 +31,9 @@ const Footer = () => {
 
           <div className="space-y-4 font-poppin">
             <h1 className="font-medium text-[20px]">Account</h1>
-            <p className="font-light text-[16px]">Cart</p>
+            <Link to="cart">
+              <p className="font-light text-[16px]">Cart</p>
+            </Link>
 
             <p className="font-light text-[16px]">Shop</p>
           </div>

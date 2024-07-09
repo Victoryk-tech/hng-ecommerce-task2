@@ -12,7 +12,7 @@ const Main = () => {
     setVisible((prevValue) => prevValue + 4);
   };
   return (
-    <div className="px-2 md:px-6 lg:px-20 lg:py-12  md:py-10 pb-10 w-full border-b-[1px] border-black">
+    <div className="px-2 md:px-6 lg:px-20 lg:py-12  md:py-10 py-14 w-full border-b-[1px] border-black">
       <div className="space-y-5">
         <div className="border-l-[24px] border-[#FF8933] py-7 pl-4  font-inter">
           <h1 className="font-semibold text-[16px] text-[#FF8933]">
@@ -58,7 +58,7 @@ const Main = () => {
       </div>
       <div className="py-16 md:pt-2 lg:pt-6 ">
         <button
-          className="bg-[#FF8933] text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
+          className="bg-[#FF8933] hover:border-[#FF8933] hover:border-[1px]  hover:text-[#FF8933] hover:bg-transparent transition-all ease-in-out text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
           onClick={showMore}
         >
           View all Products
