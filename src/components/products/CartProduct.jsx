@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/ContextProvider";
 import dropup from "../../assets/dropUP.png";
 import dropdown from "../../assets/dropDown.png";
+import { AiOutlineDelete } from "react-icons/ai";
 
 const CartProduct = ({ cartItems }) => {
   const { amount, title, image, quantity } = cartItems;
@@ -58,6 +59,12 @@ const CartProduct = ({ cartItems }) => {
       </div>
       <div>
         <p>${`${parseFloat(quantity * amount).toLocaleString()}`}</p>
+      </div>
+      <div
+        onClick={() => removeFromCart(cartItems)}
+        className="text-xl font-semibold hover:text-[#FF8933]"
+      >
+        <AiOutlineDelete />
       </div>
     </div>
   );
