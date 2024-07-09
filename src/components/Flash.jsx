@@ -10,7 +10,10 @@ const Flash = () => {
     setShow((prevValue) => prevValue + 4);
   };
   return (
-    <div className="px-2 md:px-4 lg:px-20 lg:py-20 md:py-10 py-4 w-full">
+    <div
+      className="px-2 md:px-4 lg:px-20 lg:py-20 md:py-10 py-4 w-full"
+      id="flash"
+    >
       <div className="w-full space-y-6">
         <div className="border-l-[24px] border-[#FF8933] py-2 pl-4 font-inter md:mb-10 lg:mb-12">
           <h1 className="font-semibold text-[24px] lg:text-[36px] text-[#282727]">
