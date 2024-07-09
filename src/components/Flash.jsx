@@ -11,7 +11,7 @@ const Flash = () => {
   };
   return (
     <div
-      className="px-2 md:px-4 lg:px-20 lg:py-20 md:py-10 py-4 w-full"
+      className="px-2 md:px-4 lg:px-20 lg:py-20 md:py-10 py-4 w-full border-b-[1px] border-black"
       id="flash"
     >
       <div className="w-full space-y-6">

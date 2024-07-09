@@ -8,8 +8,11 @@ const Main = () => {
   const showMore = () => {
     setVisible((prevValue) => prevValue + 4);
   };
+  const showAll = () => {
+    setVisible((prevValue) => prevValue + 4);
+  };
   return (
-    <div className="px-2 md:px-6 lg:px-20 lg:py-20 md:py-10 pb-10 w-full">
+    <div className="px-2 md:px-6 lg:px-20 lg:py-12  md:py-10 pb-10 w-full border-b-[1px] border-black">
       <div className="space-y-5">
         <div className="border-l-[24px] border-[#FF8933] py-7 pl-4  font-inter">
           <h1 className="font-semibold text-[16px] text-[#FF8933]">
@@ -22,8 +25,8 @@ const Main = () => {
       </div>
       <div className="hidden md:flex items-start justify-start gap-x-4 text-center">
         <p
-          className="font-poppin font-normal text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out"
-          onClick={showMore}
+          className="font-poppin font-normal cursor-pointer text-[16px] border-[1px] border-[#FF8933] py-2 px-5 rounded-2xl hover:bg-[#FF8933] hover:text-white transition-all ease-out"
+          onClick={showAll}
         >
           All
         </p>
