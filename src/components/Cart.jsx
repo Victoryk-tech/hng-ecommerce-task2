@@ -9,7 +9,9 @@ const Cart = () => {
   return (
     <div className="w-full h-full px-2 md:px-4 lg:px-20 py-10">
       <div className="text-[11px] flex items-start justify-start font-poppin font-normal md:text-[16px] gap-1 lg:space-x-3 pb-10">
-        <p>Home</p>
+        <Link to="/">
+          <p>Home</p>
+        </Link>
         <p>/</p>
 
         <p>Cart</p>
@@ -17,12 +19,13 @@ const Cart = () => {
 
       <div>
         {cartState.cart.length > 0 ? (
-          <div>
-            <nav className="flex items-start justify-between text-center p-4 shadow-md">
-              <p>Product</p>
+          <div className="flex flex-col items start justify-start w-full">
+            <nav className="flex items-start justify-between text-center p-4 shadow-md ">
+              <p className="lg:w-[20%]">Product</p>
               <p>Price</p>
               <p>Quantity</p>
               <p>Subtotal</p>
+              <p className="lg:px-6 md:pl-[1px] md:block hidden"></p>
             </nav>
 
             <div className="pt-5  w-full">
@@ -35,8 +38,9 @@ const Cart = () => {
               })}
 
               <div className="flex flex-row items-center justify-between w-full mt-4">
+                {" "}
                 <button className="border-[#FF8933] text-center text-[#FF8933] transition-all ease-in hover:bg-[#FF8933] hover:text-white border-[1px] hover:scale-100 py-4 md:py-5 lg:py-[13px] px-5 w-[37%] md:w-[30%] lg:w-[16%] font-semibold text-[12px]">
-                  Return to Shop
+                  <Link to="/">Return to Shop</Link>
                 </button>
                 <button className="bg-[#FF8933] text-center text-white transition-all ease-in hover:bg-white hover:text-[#FF8933] hover:border-[#FF8933] hover:border-[1px] hover:scale-100 py-4 md:py-5 lg:py-[13px] px-5 w-[37%] md:w-[30%] lg:w-[16%] font-semibold text-[12px]">
                   Update Cart

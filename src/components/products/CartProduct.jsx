@@ -29,18 +29,20 @@ const CartProduct = ({ cartItems }) => {
   return (
     <div className="flex items-center justify-between text-center px-4 py-2 shadow-md hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] w-full">
       <div className="flex items-center justify-center space-x-2">
-        <div className="w-12 h-12 lg:w-16 lg:h-16">
+        <div className="w-10 h-10 lg:w-16 lg:h-16">
           <img src={image} alt="" className="w-full h-full object-contain" />
         </div>
-        <p className="font-poppin font-semibold text-[16px]">{title}</p>
+        <p className="font-poppin font-semibold text-[14px] lg:text-[16px]">
+          {title}
+        </p>
       </div>
       <div>
-        <p className="font-poppin font-semibold text-[16px]">
+        <p className="font-poppin font-semibold text-[14px] lg:text-[16px]">
           ${amount.toLocaleString()}
         </p>
       </div>
 
-      <div className="flex items-center justify-center border-black border-[0.5px] px-2 space-x-1 hover:border-[#FF8933]">
+      <div className="flex items-center justify-center border-black border-[0.5px] px-1 lg:px-2 gap-x-1 hover:border-[#FF8933]">
         <p>{quantity}</p>
         <div>
           <img
