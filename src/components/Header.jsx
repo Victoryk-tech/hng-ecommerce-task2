@@ -52,7 +52,7 @@ const Header = () => {
             <Link to="/cart" className="relative">
               {" "}
               <IoCartOutline className="text-[22px]" />
-              <h1 className="absolute bottom-3 right-0 bg-[#FF8933] text-[#fafafa] p-2 rounded-xl font-medium text-[15px]">
+              <h1 className="absolute bottom-4 right-0 bg-[#FF8933] text-[#fafafa] p-1 rounded-xl font-medium text-[15px]">
                 {cartState.totalQuantity}
               </h1>
             </Link>
