@@ -25,7 +25,7 @@ const Details = () => {
             <p className="font-poppin font-normal text-[16px]">Subtotal</p>
             <p className="font-poppin font-normal text-[16px]">
               {" "}
-              {cartState.totalPrice.toLocaleString()}
+              ${cartState.totalPrice.toLocaleString()}
             </p>
           </div>
           <div className="flex items-start justify-between border-b-[0.3px] border-black py-4">
@@ -36,7 +36,7 @@ const Details = () => {
             <p className="font-poppin font-normal text-[16px]">total:</p>
             <p className="font-poppin font-normal text-[16px]">
               {" "}
-              {cartState.totalPrice.toLocaleString()}
+              ${cartState.totalPrice.toLocaleString()}
             </p>
           </div>
         </div>
