@@ -4,11 +4,13 @@ import fivestar from "../../assets/halfstar.png";
 import { BsBag } from "react-icons/bs";
 import { CartContext } from "../context/ContextProvider";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 const BestProducts = ({ Best }) => {
   const { dispatch } = useContext(CartContext);
   const { rating, oldprice, amount, title, image, id } = Best;
   const addToCart = (item) => {
     dispatch({ type: "Add_To_Cart", payload: item });
+    toast("item added to your cart successfully!");
   };
   return (
     <div className="flex flex-col justify-start items-start bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[300px] hover:scale-95 ease-in-out transition-all">

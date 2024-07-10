@@ -1,16 +1,17 @@
 import React, { useContext } from "react";
-
+import "react-toastify/dist/ReactToastify.css";
 import fivestar from "../../assets/fivestar.png";
-
 import discount from "../../assets/discount.png";
 import { BsBag } from "react-icons/bs";
 import { CartContext } from "../context/ContextProvider";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 const FlashSales = ({ Item }) => {
   const { dispatch } = useContext(CartContext);
   const { rating, oldprice, amount, title, image, id } = Item;
   const addToCart = (item) => {
     dispatch({ type: "Add_To_Cart", payload: item });
+    toast("item added to your cart successfully!");
   };
   return (
     <div className="flex flex-col justify-start items-start bg-white rounded-sm shadow-sm hover:shadow-lg w-[187px] lg:w-[243px] h-[215px] md:w-[223px] md:h-[312px] lg:h-[360px] hover:scale-95 ease-in-out transition-all">

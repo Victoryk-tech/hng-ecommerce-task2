@@ -5,6 +5,7 @@ import { CartContext } from "../context/ContextProvider";
 
 import { Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
+import { toast } from "react-toastify";
 
 const MainProducts = ({ Product }) => {
   const { cartState, dispatch } = useContext(CartContext);
@@ -12,6 +13,7 @@ const MainProducts = ({ Product }) => {
   // Function to add item to cart
   const addToCart = (item) => {
     dispatch({ type: "Add_To_Cart", payload: item });
+    toast("item added to your cart successfully!");
   };
   return (
     <div className="flex flex-col justify-start items-start pb-16 md:pb-0 bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[300px] hover:scale-95 ease-in-out transition-all">

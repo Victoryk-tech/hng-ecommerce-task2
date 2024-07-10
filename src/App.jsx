@@ -14,10 +14,13 @@ import ProductDetails from "./components/ProductDetails";
 import NotFound from "./Pages/NotFound";
 import FlashDetails from "./components/Details/FlashDetails";
 import BestDetails from "./components/Details/BestDetails";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
+      <ToastContainer />
       <BrowserRouter>
         <Header />
         <Routes>
