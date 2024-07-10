@@ -90,8 +90,13 @@ const Cart = () => {
             </div>
           </div>
         ) : (
-          <div className="flex items-center justify-center py-36">
-            <h1 className="font-semibold text-xl">Cart is empty</h1>
+          <div className="flex flex-col items-center justify-center py-28">
+            <div className="flex flex-col items-center space-y-4 bg-slate-100 p-16">
+              <h1 className="font-semibold text-xl ">Your Cart is empty</h1>
+              <p className="p-2 bg-[#FF8933] rounded- text-white font-poppin font-bold">
+                <Link to="/">Start Shopping</Link>
+              </p>
+            </div>
           </div>
         )}
       </div>
