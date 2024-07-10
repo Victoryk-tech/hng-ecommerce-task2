@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import ProductDetails from "./components/ProductDetails";
 import NotFound from "./Pages/NotFound";
 import FlashDetails from "./components/Details/FlashDetails";
+import BestDetails from "./components/Details/BestDetails";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="checkout" element={<Checkout />} />
           <Route path="productDetails/:id" element={<ProductDetails />} />
           <Route path="flashDetails/:id" element={<FlashDetails />} />
+          <Route path="BestDetails/:id" element={<BestDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

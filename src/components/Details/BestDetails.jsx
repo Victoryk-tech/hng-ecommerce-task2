@@ -1,17 +1,15 @@
 import React from "react";
-
 import deliver from "../../assets/deliver.png";
 import fivestar from "../../assets/fivestar.png";
 import { BsBag } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
-import productsItem from "../../components/database/flashProduct";
+import productsItems from "../../components/database/bestSeller";
 
-const FlashDetails = () => {
+const BestDetails = () => {
   const { id } = useParams();
-  const items = productsItem.find((Item) => Item.id === parseInt(id));
+  const items = productsItems.find((Best) => Best.id === parseInt(id));
   const { amount, title, image, quantity, description, oldprice, rating } =
     items;
-
   return (
     <div className="w-full h-auto px-2 lg:pl-16 py-10 gap-3">
       <div className="flex items-start justify-start font-poppin font-normal text-[14px] md:text-[16px] space-x-3 pb-10">
@@ -226,4 +224,5 @@ const FlashDetails = () => {
     </div>
   );
 };
-export default FlashDetails;
+
+export default BestDetails;
