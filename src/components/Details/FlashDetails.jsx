@@ -1,16 +1,17 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import products from "./database/mainProduct";
-import deliver from "../assets/deliver.png";
 
-import fivestar from "../assets/fivestar.png";
+import deliver from "../../assets/deliver.png";
+import fivestar from "../../assets/fivestar.png";
 import { BsBag } from "react-icons/bs";
+import { Link, useParams } from "react-router-dom";
+import productsItem from "../../components/database/flashProduct";
 
-const ProductDetails = () => {
+const FlashDetails = () => {
   const { id } = useParams();
-  const items = products.find((product) => product.id === parseInt(id));
+  const items = productsItem.find((Item) => Item.id === parseInt(id));
   const { amount, title, image, quantity, description, oldprice, rating } =
     items;
+  console.log(items);
   return (
     <div className="w-full h-auto px-2 lg:pl-16 py-10 gap-3">
       <div className="flex items-start justify-start font-poppin font-normal text-[14px] md:text-[16px] space-x-3 pb-10">
@@ -23,7 +24,7 @@ const ProductDetails = () => {
         <p>Chair</p>
         <p>/</p>
 
-        <p>{title}</p>
+        <p>{title[0]}</p>
       </div>
       <div className="flex flex-col  md:flex-row items-start md:items-center justify-center md:justify-between w-full lg:h-[100vh]">
         <div className="w-full h-full lg:w-[100%] lg:h-[90%]">
@@ -225,5 +226,4 @@ const ProductDetails = () => {
     </div>
   );
 };
-
-export default ProductDetails;
+export default FlashDetails;

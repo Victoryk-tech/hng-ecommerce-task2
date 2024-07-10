@@ -12,6 +12,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProductDetails from "./components/ProductDetails";
 import NotFound from "./Pages/NotFound";
+import FlashDetails from "./components/Details/FlashDetails";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="cart" element={<CartPage />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="productDetails/:id" element={<ProductDetails />} />
+          <Route path="flashDetails/:id" element={<FlashDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 
