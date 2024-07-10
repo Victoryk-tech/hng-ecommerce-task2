@@ -5,9 +5,10 @@ import fivestar from "../../assets/fivestar.png";
 import discount from "../../assets/discount.png";
 import { BsBag } from "react-icons/bs";
 import { CartContext } from "../context/ContextProvider";
+import { Link } from "react-router-dom";
 const FlashSales = ({ Item }) => {
   const { dispatch } = useContext(CartContext);
-  const { rating, oldprice, amount, title, image } = Item;
+  const { rating, oldprice, amount, title, image, id } = Item;
   const addToCart = (item) => {
     dispatch({ type: "Add_To_Cart", payload: item });
   };
@@ -17,6 +18,7 @@ const FlashSales = ({ Item }) => {
         <img src={discount} alt="" />
       </div>
       <div className="flex items-center justify-center md:w-[165px] w-[109px] h-[119px] lg:w-[195px] md:h-1/2 md:mb-2 lg:mb-9">
+        <Link to={`productDetails/${(Item, id)}`}></Link>
         <img src={image} alt="" className="w-full h-full object-contain" />
       </div>
 

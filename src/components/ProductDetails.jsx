@@ -1,19 +1,24 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import products from "../components/database/mainProduct";
 import deliver from "../assets/deliver.png";
 import cart from "../assets/cart.png";
 import fivestar from "../assets/fivestar.png";
+import { BsBag } from "react-icons/bs";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const items = products.find((product) => product.id === parseInt(id));
+  const items = products.find(
+    (product, Item) => Item.id || product.id === parseInt(id)
+  );
   const { amount, title, image, quantity, description, oldprice, rating } =
     items;
   return (
     <div className="w-full h-auto px-2 lg:pl-16 py-10 gap-3">
       <div className="flex items-start justify-start font-poppin font-normal text-[14px] md:text-[16px] space-x-3 pb-10">
-        <p>Home</p>
+        <Link to="/">
+          <p>Home</p>
+        </Link>
         <p>/</p>
         <p>Category</p>
         <p>/</p>
@@ -62,139 +67,41 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      <div className=" ">
+      <div className="w-full h-full  md:pt-10 pb-16 md:pb-36 lg:pb-48">
         <div className="border-l-[16px] border-[#FF8933] py-2 pl-4 font-inter">
           <h1 className="font-semibold text-[20px] text-[#282727]">
             Related Product
           </h1>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 items-center justify-center px-2 lg:px-28 py-12 w-full gap-4">
-          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[12rem] lg:w-60 h-[15rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
-            <div className="w-36 h-1/2">
-              <img
-                src={image}
-                alt=""
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] gap-3">
-              <div className="flex items-start justify-between gap-10">
-                <p className="font-poppin text-[16px] font-medium">{title}</p>
-                <img
-                  src={cart}
-                  alt=""
-                  className="font-poppin text-[16px] font-medium"
-                />
-              </div>
-              <div className="flex items-start justify-start space-x-3">
-                <p className="font-poppin text-[16px] font-medium">${amount}</p>
-                <p className="font-poppin text-[16px] font-medium line-through">
-                  ${oldprice}
-                </p>
-              </div>
-              <div className="flex items-start justify-start space-x-1">
-                <img src={fivestar} alt="" />
-                <p className="font-poppin text-[16px] font-medium">
-                  ({rating})
-                </p>
-              </div>
-            </div>
+        <div className="flex flex-col justify-start items-start pt-10 pb-16 md:pb-0 bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[200px] hover:scale-95 ease-in-out transition-all">
+          <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-full lg:w-full md:full">
+            <img src={image} alt="" className="w-full h-full object-contain" />
           </div>
 
-          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[12rem] lg:w-60 h-[15rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
-            <div className="w-36 h-1/2">
-              <img
-                src={image}
-                alt=""
-                className="w-full h-full object-contain"
-              />
+          <div className=" w-full bg-[#F5F5F5] px-2 py-2 md:py-5">
+            <div className="flex items-start justify-between">
+              <h2 className="text-[14px] md:text-[16px] font-medium">
+                {title}
+              </h2>
+              <p
+                className="text-[20px] text-center font-[900] bg-[#FF8933] p-[10px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
+                onClick={() => addToCart(items)}
+              >
+                <BsBag />
+              </p>
             </div>
-            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] gap-3">
-              <div className="flex items-start justify-between gap-10">
-                <p className="font-poppin text-[16px] font-medium">{title}</p>
-                <img
-                  src={cart}
-                  alt=""
-                  className="font-poppin text-[16px] font-medium"
-                />
-              </div>
-              <div className="flex items-start justify-start space-x-3">
-                <p className="font-poppin text-[16px] font-medium">${amount}</p>
-                <p className="font-poppin text-[16px] font-medium">
-                  ${oldprice}
-                </p>
-              </div>
-              <div className="flex items-start justify-start space-x-1">
-                <img src={fivestar} alt="" />
-                <p className="font-poppin text-[16px] font-medium">
-                  ({rating})
-                </p>
-              </div>
+            <div className="flex items-start justify-start gap-3">
+              <p className="text-[14px] md:text-[16px] text-[#DB4444]">
+                ${amount}
+              </p>
+              <p className="text-[14px] md:text-[16px] line-through">
+                {oldprice}
+              </p>
             </div>
-          </div>
-
-          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[12rem] lg:w-60 h-[15rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
-            <div className="w-36 h-1/2">
-              <img
-                src={image}
-                alt=""
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] gap-3">
-              <div className="flex items-start justify-between gap-10">
-                <p className="font-poppin text-[16px] font-medium">{title}</p>
-                <img
-                  src={cart}
-                  alt=""
-                  className="font-poppin text-[16px] font-medium"
-                />
-              </div>
-              <div className="flex items-start justify-start space-x-3">
-                <p className="font-poppin text-[16px] font-medium">${amount}</p>
-                <p className="font-poppin text-[16px] font-medium">
-                  ${oldprice}
-                </p>
-              </div>
-              <div className="flex items-start justify-start space-x-1">
-                <img src={fivestar} alt="" />
-                <p className="font-poppin text-[16px] font-medium">
-                  ({rating})
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className=" flex flex-col justify-center items-center p-1 hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] bg-white rounded-sm w-[12rem] lg:w-60 h-[15rem] md:w-[12rem] md:h-60 lg:h-[14rem] hover:scale-95 ease-in-out transition-all">
-            <div className="w-36 h-1/2">
-              <img
-                src={image}
-                alt=""
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="w-full flex flex-col items-start justify-start bg-[#f5f5f5] gap-3">
-              <div className="flex items-start justify-between gap-10">
-                <p className="font-poppin text-[16px] font-medium">{title}</p>
-                <img
-                  src={cart}
-                  alt=""
-                  className="font-poppin text-[16px] font-medium"
-                />
-              </div>
-              <div className="flex items-start justify-start space-x-3">
-                <p className="font-poppin text-[16px] font-medium">${amount}</p>
-                <p className="font-poppin text-[16px] font-medium">
-                  ${oldprice}
-                </p>
-              </div>
-              <div className="flex items-start justify-start space-x-1">
-                <img src={fivestar} alt="" />
-                <p className="font-poppin text-[16px] font-medium">
-                  ({rating})
-                </p>
-              </div>
+            <div className="flex items-start justify-start">
+              <img src={fivestar} alt="" />
+              <p className="text-[14px] md:text-[16px]">({rating})</p>
             </div>
           </div>
         </div>
