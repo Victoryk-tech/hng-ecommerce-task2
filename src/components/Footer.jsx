@@ -4,8 +4,8 @@ import send from "../assets/sendicon.png";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="px-4 md:px-6 lg:px-20 bg-[#5B3702] text-white">
-      <div className="space-y-9 md:space-y-0 flex flex-col md:flex-row items-start justify-start md:justify-between border-b-[1px] py-10">
+    <div className="px-4 pt-8 pb-[56px]  md:px-6 lg:px-20 bg-[#5B3702] text-white">
+      <div className="space-y-28 md:space-y-0 flex flex-col md:flex-row items-start justify-start md:justify-between border-b-[1px] py-24 md:py-16">
         <div className="space-y-2 w-full">
           <h1 className="font-bold text-[24px] font-inter">Duexe</h1>
 
