@@ -98,7 +98,7 @@ const ProductDetails = () => {
                   ${amount[1]}
                 </p>
                 <p className="text-[14px] md:text-[16px] line-through">
-                  {oldprice[1]}
+                  ${oldprice[1]}
                 </p>
               </div>
               <div className="flex items-start justify-start">
@@ -135,7 +135,7 @@ const ProductDetails = () => {
                   ${amount[3]}
                 </p>
                 <p className="text-[14px] md:text-[16px] line-through">
-                  {oldprice[3]}
+                  ${oldprice[3]}
                 </p>
               </div>
               <div className="flex items-start justify-start">
@@ -173,7 +173,7 @@ const ProductDetails = () => {
                   ${amount[3]}
                 </p>
                 <p className="text-[14px] md:text-[16px] line-through">
-                  {oldprice[3]}
+                  ${oldprice[3]}
                 </p>
               </div>
               <div className="flex items-start justify-start">
@@ -211,7 +211,7 @@ const ProductDetails = () => {
                   ${amount[4]}
                 </p>
                 <p className="text-[14px] md:text-[16px] line-through">
-                  {oldprice[4]}
+                  ${oldprice[4]}
                 </p>
               </div>
               <div className="flex items-start justify-start">
