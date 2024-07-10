@@ -10,7 +10,7 @@ import productH from "../../assets/productH.png";
 const products = [
   {
     id: 1,
-    image: productA,
+    image: [[productA], [productB], [productC], [productH], [productE]],
     title: "Zaron Side Table",
     amount: 920,
     rating: 65,
@@ -21,7 +21,7 @@ const products = [
   },
   {
     id: 2,
-    image: productB,
+    image: [[productB], [productD], [productC], [productF], [productA]],
     title: "Shally Chair",
     amount: 970,
     rating: 65,
@@ -32,7 +32,7 @@ const products = [
   },
   {
     id: 3,
-    image: productC,
+    image: [[productC], [productF], [productA], [productB], [productE]],
     title: "Lianna Sofa",
     amount: 1000,
     rating: 70,
@@ -43,7 +43,7 @@ const products = [
   },
   {
     id: 4,
-    image: productD,
+    image: [[productD], [productG], [productC], [productH], [productE]],
     title: "Lianna Sofa",
     amount: 1000,
     rating: 70,
@@ -54,7 +54,7 @@ const products = [
   },
   {
     id: 5,
-    image: productE,
+    image: [[productE], [productF], [productC], [productH], [productA]],
     title: "Amelia Sofa",
     amount: 1240,
     rating: 70,
@@ -65,7 +65,7 @@ const products = [
   },
   {
     id: 6,
-    image: productF,
+    image: [[productF], [productB], [productC], [productE], [productH]],
     title: "Ene Chair",
     amount: 1260,
     rating: 70,
@@ -76,7 +76,7 @@ const products = [
   },
   {
     id: 7,
-    image: productG,
+    image: [[productG], [productB], [productF], [productA], [productC]],
     title: "Venna Side Table",
     amount: 1000,
     rating: 70,
@@ -87,7 +87,7 @@ const products = [
   },
   {
     id: 8,
-    image: productH,
+    image: [[productH], [productA], [productE], [productC], [productB]],
     title: "Rionna Sofa",
     amount: 1000,
     rating: 70,

@@ -2,15 +2,14 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import products from "../components/database/mainProduct";
 import deliver from "../assets/deliver.png";
-import cart from "../assets/cart.png";
+
 import fivestar from "../assets/fivestar.png";
 import { BsBag } from "react-icons/bs";
+import flash from "../components/products/FlashSales";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const items = products.find(
-    (product, Item) => Item.id || product.id === parseInt(id)
-  );
+  const items = products.find((product) => product.id === parseInt(id));
   const { amount, title, image, quantity, description, oldprice, rating } =
     items;
   return (
@@ -29,7 +28,7 @@ const ProductDetails = () => {
       </div>
       <div className="flex flex-col  md:flex-row items-start md:items-center justify-center md:justify-between w-full lg:h-[100vh]">
         <div className="w-full h-full lg:w-[100%] lg:h-[90%]">
-          <img src={image} alt="" className="w-full h-full object-contain" />
+          <img src={image[0]} alt="" className="w-full h-full object-contain" />
         </div>
         <div className="flex flex-col items-start justify-start py-32 md:py-0 lg:px-48 space-y-5 lg:w-[100%] lg:h-[80%]">
           <div className="space-y-2">
@@ -73,35 +72,153 @@ const ProductDetails = () => {
             Related Product
           </h1>
         </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start justify-start gap-y-20 md:gap-y-6 lg:gap-0 py-6 ">
+          <div className="flex flex-col justify-start items-start pt-10 pb-16 md:pb-0 bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[200px] hover:scale-95 ease-in-out transition-all">
+            <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-full lg:w-full md:full">
+              <img
+                src={image[1]}
+                alt=""
+                className="w-full h-full object-contain"
+              />
+            </div>
 
-        <div className="flex flex-col justify-start items-start pt-10 pb-16 md:pb-0 bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[200px] hover:scale-95 ease-in-out transition-all">
-          <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-full lg:w-full md:full">
-            <img src={image} alt="" className="w-full h-full object-contain" />
+            <div className=" w-full bg-[#F5F5F5] px-2 py-2 md:py-5">
+              <div className="flex items-start justify-between">
+                <h2 className="text-[14px] md:text-[16px] font-medium">
+                  {title}
+                </h2>
+                <p
+                  className="text-[20px] text-center font-[900] bg-[#FF8933] p-[10px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
+                  onClick={() => addToCart(items)}
+                >
+                  <BsBag />
+                </p>
+              </div>
+              <div className="flex items-start justify-start gap-3">
+                <p className="text-[14px] md:text-[16px] text-[#DB4444]">
+                  ${amount}
+                </p>
+                <p className="text-[14px] md:text-[16px] line-through">
+                  {oldprice}
+                </p>
+              </div>
+              <div className="flex items-start justify-start">
+                <img src={fivestar} alt="" />
+                <p className="text-[14px] md:text-[16px]">({rating})</p>
+              </div>
+            </div>
+          </div>
+          {/* twoooo */}
+
+          <div className="flex flex-col justify-start items-start pt-10 pb-16 md:pb-0 bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[200px] hover:scale-95 ease-in-out transition-all">
+            <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-full lg:w-full md:full">
+              <img
+                src={image[2]}
+                alt=""
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            <div className=" w-full bg-[#F5F5F5] px-2 py-2 md:py-5">
+              <div className="flex items-start justify-between">
+                <h2 className="text-[14px] md:text-[16px] font-medium">
+                  {title}
+                </h2>
+                <p
+                  className="text-[20px] text-center font-[900] bg-[#FF8933] p-[10px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
+                  onClick={() => addToCart(items)}
+                >
+                  <BsBag />
+                </p>
+              </div>
+              <div className="flex items-start justify-start gap-3">
+                <p className="text-[14px] md:text-[16px] text-[#DB4444]">
+                  ${amount}
+                </p>
+                <p className="text-[14px] md:text-[16px] line-through">
+                  {oldprice}
+                </p>
+              </div>
+              <div className="flex items-start justify-start">
+                <img src={fivestar} alt="" />
+                <p className="text-[14px] md:text-[16px]">({rating})</p>
+              </div>
+            </div>
           </div>
 
-          <div className=" w-full bg-[#F5F5F5] px-2 py-2 md:py-5">
-            <div className="flex items-start justify-between">
-              <h2 className="text-[14px] md:text-[16px] font-medium">
-                {title}
-              </h2>
-              <p
-                className="text-[20px] text-center font-[900] bg-[#FF8933] p-[10px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
-                onClick={() => addToCart(items)}
-              >
-                <BsBag />
-              </p>
+          {/* three */}
+
+          <div className="flex flex-col justify-start items-start pt-10 pb-16 md:pb-0 bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[200px] hover:scale-95 ease-in-out transition-all">
+            <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-full lg:w-full md:full">
+              <img
+                src={image[3]}
+                alt=""
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div className="flex items-start justify-start gap-3">
-              <p className="text-[14px] md:text-[16px] text-[#DB4444]">
-                ${amount}
-              </p>
-              <p className="text-[14px] md:text-[16px] line-through">
-                {oldprice}
-              </p>
+
+            <div className=" w-full bg-[#F5F5F5] px-2 py-2 md:py-5">
+              <div className="flex items-start justify-between">
+                <h2 className="text-[14px] md:text-[16px] font-medium">
+                  {title}
+                </h2>
+                <p
+                  className="text-[20px] text-center font-[900] bg-[#FF8933] p-[10px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
+                  onClick={() => addToCart(items)}
+                >
+                  <BsBag />
+                </p>
+              </div>
+              <div className="flex items-start justify-start gap-3">
+                <p className="text-[14px] md:text-[16px] text-[#DB4444]">
+                  ${amount}
+                </p>
+                <p className="text-[14px] md:text-[16px] line-through">
+                  {oldprice}
+                </p>
+              </div>
+              <div className="flex items-start justify-start">
+                <img src={fivestar} alt="" />
+                <p className="text-[14px] md:text-[16px]">({rating})</p>
+              </div>
             </div>
-            <div className="flex items-start justify-start">
-              <img src={fivestar} alt="" />
-              <p className="text-[14px] md:text-[16px]">({rating})</p>
+          </div>
+
+          {/* four */}
+
+          <div className="flex flex-col justify-start items-start pt-10 pb-16 md:pb-0 bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[200px] hover:scale-95 ease-in-out transition-all">
+            <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-full lg:w-full md:full">
+              <img
+                src={image[4]}
+                alt=""
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            <div className=" w-full bg-[#F5F5F5] px-2 py-2 md:py-5">
+              <div className="flex items-start justify-between">
+                <h2 className="text-[14px] md:text-[16px] font-medium">
+                  {title}
+                </h2>
+                <p
+                  className="text-[20px] text-center font-[900] bg-[#FF8933] p-[10px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
+                  onClick={() => addToCart(items)}
+                >
+                  <BsBag />
+                </p>
+              </div>
+              <div className="flex items-start justify-start gap-3">
+                <p className="text-[14px] md:text-[16px] text-[#DB4444]">
+                  ${amount}
+                </p>
+                <p className="text-[14px] md:text-[16px] line-through">
+                  {oldprice}
+                </p>
+              </div>
+              <div className="flex items-start justify-start">
+                <img src={fivestar} alt="" />
+                <p className="text-[14px] md:text-[16px]">({rating})</p>
+              </div>
             </div>
           </div>
         </div>

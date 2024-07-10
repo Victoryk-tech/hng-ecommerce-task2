@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import addCart from "../../assets/cart.png";
+
 import fivestar from "../../assets/fivestar.png";
 import { CartContext } from "../context/ContextProvider";
-import products from "../database/mainProduct";
+
 import { Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
 
@@ -17,7 +17,7 @@ const MainProducts = ({ Product }) => {
     <div className="flex flex-col justify-start items-start pb-16 md:pb-0 bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[300px] hover:scale-95 ease-in-out transition-all">
       <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-full lg:w-full md:full md:mb-3">
         <Link to={`productDetails/${(Product, id)}`}>
-          <img src={image} alt="" className="w-full h-full object-contain" />
+          <img src={image[0]} alt="" className="w-full h-full object-contain" />
         </Link>
       </div>
 
