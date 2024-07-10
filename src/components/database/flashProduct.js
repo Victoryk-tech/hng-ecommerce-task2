@@ -24,6 +24,8 @@ const discount = [
     amount: [[120], [110], [120], [110], [120]],
     rating: [[88], [86], [85], [85], [85]],
     oldprice: [[160], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 2,
@@ -38,6 +40,8 @@ const discount = [
     amount: [[110], [110], [120], [110], [120]],
     rating: [[86], [86], [85], [85], [85]],
     oldprice: [[160], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 3,
@@ -52,6 +56,8 @@ const discount = [
     amount: [[120], [110], [120], [110], [120]],
     rating: [[85], [86], [85], [85], [85]],
     oldprice: [[160], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 4,
@@ -66,6 +72,8 @@ const discount = [
     amount: [[110], [110], [120], [110], [120]],
     rating: [[85], [86], [85], [85], [85]],
     oldprice: [[180], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 5,
@@ -80,6 +88,8 @@ const discount = [
     amount: [[120], [110], [120], [110], [120]],
     rating: [[85], [86], [85], [85], [85]],
     oldprice: [[170], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 6,
@@ -94,6 +104,8 @@ const discount = [
     amount: [[100], [110], [120], [110], [120]],
     rating: [[85], [86], [85], [85], [85]],
     oldprice: [[160], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 7,
@@ -108,6 +120,8 @@ const discount = [
     amount: [[190], [110], [120], [110], [120]],
     rating: [[85], [86], [85], [85], [85]],
     oldprice: [[1240], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 8,
@@ -122,6 +136,8 @@ const discount = [
     amount: [[100], [110], [120], [110], [120]],
     rating: [[86], [86], [85], [85], [85]],
     oldprice: [[160], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 9,
@@ -136,6 +152,8 @@ const discount = [
     amount: [[1000], [110], [120], [110], [120]],
     rating: [[87], [86], [85], [85], [85]],
     oldprice: [[1340], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 10,
@@ -150,6 +168,8 @@ const discount = [
     amount: [[1000], [110], [120], [110], [120]],
     rating: [[75], [86], [85], [85], [85]],
     oldprice: [[1240], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 11,
@@ -164,6 +184,8 @@ const discount = [
     amount: [[1240], [110], [120], [110], [120]],
     rating: [[86], [86], [85], [85], [85]],
     oldprice: [[160], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 12,
@@ -178,6 +200,8 @@ const discount = [
     amount: [[1260], [110], [120], [110], [120]],
     rating: [[95], [86], [85], [85], [85]],
     oldprice: [[1340], [160], [160], [180], [170]],
+    description:
+      "Enjoy unparalleled comfort and timeless elegance with the Sofia Chair. Meticulously crafted to perfection, this chair combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
 ];
 
