@@ -32,9 +32,9 @@ const Flash = () => {
           })}
         </div>
       </div>
-      <div className="pt-8 md:pt-2 lg:pt-6">
+      <div className="pt-20 pb-12 md:pt-12 md:pb-16 lg:pt-6">
         <button
-          className="bg-[#FF8933] text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
+          className="bg-[#FF8933] hover:bg-transparent hover:border-[1px] hover:text-[#FF8933] hover:border-[#FF8933] transition-all ease-out text-white py-3 px-5 w-[49%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
           onClick={showVisible}
         >
           View all Products
