@@ -14,7 +14,7 @@ const FlashSales = ({ Item }) => {
     toast("item added to your cart successfully!");
   };
   return (
-    <div className="flex flex-col justify-start items-start bg-white rounded-sm shadow-md hover:shadow-lg w-[173px] lg:w-[243px] h-[215px] md:w-[223px] md:h-[312px] lg:h-[360px] hover:scale-95 ease-in-out transition-all">
+    <div className="flex flex-col justify-start items-start bg-white rounded-sm shadow-md hover:shadow-lg w-[170px] lg:w-[243px] h-[215px] md:w-[223px] md:h-[312px] lg:h-[360px] hover:scale-95 ease-in-out transition-all">
       <div className="w-full flex items-start justify-start pt-2 px-2 pb-10">
         <img src={discount} alt="" />
       </div>
