@@ -4,8 +4,8 @@ import customer from "../assets/customer.png";
 import tick from "../assets/tick.png";
 const Service = () => {
   return (
-    <div className="gap-10 md:pt-[12rem]  flex flex-col md:flex md:flex-row items-center text-center justify-center md:justify-between px-2 md:px-4 lg:px-20 lg:pb-20 md:pb-10 py-16 w-full  ">
-      <div className="flex flex-col items-center justify-center space-y-4">
+    <div className="  border-[1px] border-b-black grid grid-cols-1 md:grid-cols-3 items-center text-center justify-center md:justify-between gap-y-6 lg:gap-x-[150px] px-2 md:px-6 lg:px-16 md:pb-10 py-16  ">
+      <div className="flex flex-col items-center justify-center gap-y-5">
         <div className="rounded-[50%] bg-[#5B3702] text-white p-2">
           <img src={delivery} alt="" />
         </div>
@@ -18,7 +18,7 @@ const Service = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center space-y-4">
+      <div className="flex flex-col items-center justify-center gap-y-5">
         <div className="rounded-[50%] bg-[#5B3702] text-white p-2">
           <img src={customer} alt="" />
         </div>
@@ -31,7 +31,7 @@ const Service = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center space-y-4">
+      <div className="flex flex-col items-center justify-center gap-y-5">
         <div className="rounded-[50%] bg-[#5B3702] text-white p-2">
           <img src={tick} alt="" />
         </div>

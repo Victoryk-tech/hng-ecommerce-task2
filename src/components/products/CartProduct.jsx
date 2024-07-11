@@ -27,18 +27,18 @@ const CartProduct = ({ cartItems }) => {
     dispatch({ type: "Remove_From_Cart", payload: item });
   };
   return (
-    <div className="flex items-center justify-between text-center px-4 py-2 shadow-md hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] w-full">
-      <div className="flex items-center justify-center space-x-2">
+    <div className="flex items-center justify-between lg:justify-start  text-center py-6 px-3  lg:gap-[176px] lg:pl-[10px] shadow-md hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] w-full">
+      <div className="flex items-center justify-center space-x-2 w-[120.11px] lg:w-[200px]">
         <div className="w-10 h-10 lg:w-16 lg:h-16">
-          <img src={image} alt="" className="w-full h-full object-contain" />
+          <img src={image[0]} alt="" className="w-full h-full object-contain" />
         </div>
         <p className="font-poppin font-semibold text-[14px] lg:text-[16px]">
-          {title}
+          {title[0]}
         </p>
       </div>
       <div>
         <p className="font-poppin font-semibold text-[14px] lg:text-[16px]">
-          ${amount.toLocaleString()}
+          ${amount[0].toLocaleString()}
         </p>
       </div>
 
@@ -60,7 +60,7 @@ const CartProduct = ({ cartItems }) => {
         </div>
       </div>
       <div>
-        <p>${`${parseFloat(quantity * amount).toLocaleString()}`}</p>
+        <p>${`${parseFloat(quantity * amount[0]).toLocaleString()}`}</p>
       </div>
       <div
         onClick={() => removeFromCart(cartItems)}

@@ -13,7 +13,7 @@ const BestProducts = ({ Best }) => {
     toast("item added to your cart successfully!");
   };
   return (
-    <div className="flex flex-col justify-start items-start bg-white rounded-sm shadow-sm hover:shadow-lg w-[176px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[300px] hover:scale-95 ease-in-out transition-all">
+    <div className="flex flex-col justify-start items-start bg-white rounded-sm shadow-md hover:shadow-lg w-[170px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[300px] hover:scale-95 ease-in-out transition-all">
       <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-[170px] lg:w-full md:full md:mb-3 lg:mb-7">
         <Link to={`BestDetails/${(Best, id)}`}>
           <img src={image[0]} alt="" className="w-full h-full object-contain" />

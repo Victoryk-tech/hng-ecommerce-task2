@@ -20,12 +20,15 @@ const Cart = () => {
       <div>
         {cartState.cart.length > 0 ? (
           <div className="flex flex-col items start justify-start w-full">
-            <nav className="flex items-start justify-between text-center p-4 shadow-md ">
+            <nav className="flex items-start justify-between py-6 px-3 lg:justify-start md:gap-[142px] lg:gap-[150px] lg:pl-[10px] text-center p-4 shadow-md ">
               <p className="lg:w-[20%]">Product</p>
-              <p>Price</p>
-              <p>Quantity</p>
-              <p>Subtotal</p>
-              <p className="lg:px-6 md:pl-[1px] md:block hidden"></p>
+              <p className="md:pl-3 lg:pl-0">Price</p>
+              <p className="hidden lg:block">Quantity</p>
+              <p className="block lg:hidden">Qty</p>
+              <p className="hidden lg:block">Subtotal</p>
+              <p className="block lg:hidden">S/t</p>
+
+              <p className="  md:block"></p>
             </nav>
 
             <div className="pt-5  w-full">

@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <div className=" flex flex-col items-start justify-start w-full h-auto sticky top-0 z-[999]">
       <TopNav />
-      <div className="px-4 md:px-6 lg:px-24 py-6 shadow-md  bg-[#FAFAFA] w-full">
+      <div className="px-4 md:px-6 lg:px-20 py-6 shadow-md  bg-[#FAFAFA] w-full">
         <div className="flex items-center justify-between ">
           <Link to="/">
             {" "}
@@ -38,11 +38,11 @@ const Header = () => {
 
             <p>Best Seller</p>
           </nav>
-          <div className="flex items-center justify-center space-x-2">
+          <div className="flex items-center justify-center space-x-2 lg:space-x-4">
             <div className="  md:pr-3 bg-[#f5f5f5] shadow-sm hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] flex items-center justify-center rounded-lg pl-1 md:pl-3">
               <input
                 type="text"
-                className="outline-none bg-none py-2 w-56 md:w-40 lg:w-44"
+                className="outline-none bg-none py-2 w-52 md:w-40 lg:w-44"
               />
               <img
                 src={search}
