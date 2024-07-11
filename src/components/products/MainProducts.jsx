@@ -16,7 +16,7 @@ const MainProducts = ({ Product }) => {
     toast("item added to your cart successfully!");
   };
   return (
-    <div className="flex flex-col justify-start items-start pb-16 md:pb-0 bg-white rounded-sm shadow-md hover:shadow-lg w-[163px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[300px] hover:scale-95 ease-in-out transition-all">
+    <div className="flex flex-col justify-start items-start pb-16 md:pb-0 bg-white rounded-sm shadow-md hover:shadow-lg w-[170px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[300px] hover:scale-95 ease-in-out transition-all">
       <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-full lg:w-full md:full md:mb-3">
         <Link to={`productDetails/${(Product, id)}`}>
           <img src={image[0]} alt="" className="w-full h-full object-contain" />

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="bg-[#fff] pt-36">
       <div className="  pt-[56px] pb-[32px] gap-[60px] md:px-6 lg:px-[146px] lg:py-[16px] lg:gap-[40px] bg-[#5B3702] text-white">
-        <div className="space-y-[100px] md:space-y-[24px] flex flex-col md:flex-row items-start justify-start md:justify-between border-b-[1px] py-[72px] px-[2px] md:py-16 w-ull">
+        <div className="space-y-[100px] md:space-y-[24px] flex flex-col md:flex-row items-start justify-start md:justify-between border-b-[1px] py-[72px] px-[24px] md:py-16 w-ull">
           <div className="space-y-2 w-full">
             <div className="space-y-[24px] w-[385px]">
               <h1 className="font-bold text-[24px] leading-[24px] font-inter">
@@ -17,13 +17,13 @@ const Footer = () => {
                 Get 10% off your first order
               </p>
             </div>
-            <div className="flex items-start justify-between py-3 px-2 w-[310px] md:w-[82%] lg:w-[50%] border-white border-[1.5px]  bg-transparent text-[16px] font-normal font-poppin">
+            <div className="flex items-start justify-between py-3 px-3 w-[350px] md:w-[82%] lg:w-[50%] border-white border-[1.5px]  bg-transparent text-[16px] font-normal font-poppin">
               <input
                 type="text"
                 placeholder="Enter your email"
                 className=" outline-none bg-transparent lg:w-[100%]"
               />
-              <img src={send} alt="" className="mr-3" />
+              <img src={send} alt="" className="" />
             </div>
           </div>
           <div className="flex  items-start justify-start gap-[48px] lg:justify-between w-full">

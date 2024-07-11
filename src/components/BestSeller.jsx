@@ -10,7 +10,7 @@ const BestSeller = () => {
     setVisible((prevValue) => prevValue + 4);
   };
   return (
-    <div className="px-2 md:px-6 lg:px-6 lg:py-20 md:py-10 py-28 w-full border-b-[0.1px]  border-black">
+    <div className="px-6 md:px-6 lg:px-6 lg:py-20 md:py-10 py-28 w-full border-b-[0.1px]  border-black">
       <div className="space-y-4">
         <div className="border-l-[24px] border-[#FF8933] py-10 pl-4 font-inter">
           <h1 className="font-semibold text-[16px] text-[#FF8933]">
@@ -35,7 +35,7 @@ const BestSeller = () => {
       </div>
       <div className="pt-16 md:pt-2 lg:pt-6">
         <button
-          className="bg-[#FF8933] rounded-[4px] text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
+          className="bg-[#FF8933] text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
           onClick={showMore}
         >
           View all Products
