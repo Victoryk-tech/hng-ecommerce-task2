@@ -58,7 +58,7 @@ const Main = () => {
       </div>
       <div className="py-14 md:pt-2 lg:pt-6 ">
         <button
-          className="bg-[#FF8933] hover:border-[#FF8933] hover:border-[1px]  hover:text-[#FF8933] hover:bg-transparent transition-all ease-in-out text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
+          className="bg-[#FF8933] rounded-[4px] hover:border-[#FF8933] hover:border-[1px]  hover:text-[#FF8933] hover:bg-transparent transition-all ease-in-out text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
           onClick={showMore}
         >
           View all Products

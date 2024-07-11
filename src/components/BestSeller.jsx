@@ -35,7 +35,7 @@ const BestSeller = () => {
       </div>
       <div className="pt-16 md:pt-2 lg:pt-6">
         <button
-          className="bg-[#FF8933] text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
+          className="bg-[#FF8933] rounded-[4px] text-white py-3 px-5 w-[50%] md:w-[30%] lg:w-[20%] font-semibold text-[16px]"
           onClick={showMore}
         >
           View all Products

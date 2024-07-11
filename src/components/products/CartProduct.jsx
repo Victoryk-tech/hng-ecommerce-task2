@@ -28,7 +28,7 @@ const CartProduct = ({ cartItems }) => {
   };
   return (
     <div className="flex items-center justify-between lg:justify-start  text-center py-6 px-3  lg:gap-[176px] lg:pl-[10px] shadow-md hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] w-full">
-      <div className="flex items-center justify-center space-x-2 w-[120.11px] lg:w-[200px]">
+      <div className="flex items-center justify-center space-x-2 w-[120.11px]">
         <div className="w-10 h-10 lg:w-16 lg:h-16">
           <img src={image[0]} alt="" className="w-full h-full object-contain" />
         </div>
