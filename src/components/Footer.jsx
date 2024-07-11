@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="bg-[#fff] pt-36">
       <div className="  pt-[56px] pb-[32px] gap-[60px] md:px-6 lg:px-[146px] lg:py-[16px] lg:gap-[40px] bg-[#5B3702] text-white">
-        <div className="space-y-[100px] md:space-y-[24px] flex flex-col md:flex-row items-start justify-start md:justify-between border-b-[1px] py-[72px] px-[24px] md:py-16 w-ull">
+        <div className="space-y-[100px] md:space-y-[24px] flex flex-col md:flex-row items-start justify-start md:justify-between border-b-[1px] py-[72px] px-[2px] md:py-16 w-ull">
           <div className="space-y-2 w-full">
             <div className="space-y-[24px] w-[385px]">
               <h1 className="font-bold text-[24px] leading-[24px] font-inter">
