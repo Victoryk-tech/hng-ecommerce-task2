@@ -12,7 +12,7 @@ const Main = () => {
     setVisible((prevValue) => prevValue + 4);
   };
   return (
-    <div className="px-6 md:px-6 lg:px-10 lg:py-16  md:py-10 py-10 w-full border-b-[0.1px] border-black md:border-none">
+    <div className="px-2 md:px-6 lg:px-10 lg:py-16  md:py-10 py-10 w-full border-b-[0.1px] border-black md:border-none">
       <div className="space-y-5">
         <div className="border-l-[24px] border-[#FF8933] py-7 pl-4  font-inter">
           <h1 className="font-semibold text-[16px] text-[#FF8933]">

@@ -10,7 +10,7 @@ const BestSeller = () => {
     setVisible((prevValue) => prevValue + 4);
   };
   return (
-    <div className="px-6 md:px-6 lg:px-6 lg:py-20 md:py-10 py-28 w-full border-b-[0.1px]  border-black">
+    <div className="px-2 md:px-6 lg:px-6 lg:py-20 md:py-10 py-28 w-full border-b-[0.1px]  border-black">
       <div className="space-y-4">
         <div className="border-l-[24px] border-[#FF8933] py-10 pl-4 font-inter">
           <h1 className="font-semibold text-[16px] text-[#FF8933]">

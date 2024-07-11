@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <div className=" flex flex-col items-start justify-start w-full h-auto sticky top-0 z-[999]">
       <TopNav />
-      <div className="px-4 md:px-6 lg:px-20 py-6 shadow-md  bg-[#FAFAFA] w-full">
+      <div className="px-4 md:px-6 lg:px-20 py-6 shadow-md  bg-[#FFF] w-full">
         <div className="flex items-center justify-between hover:cursor-pointer">
           <Link to="/">
             {" "}

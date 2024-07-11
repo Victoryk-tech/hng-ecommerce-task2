@@ -4,7 +4,7 @@ import Cart from "../components/Cart";
 
 const CartPage = () => {
   return (
-    <div>
+    <div className="bg-[#fff]">
       <Cart />
     </div>
   );

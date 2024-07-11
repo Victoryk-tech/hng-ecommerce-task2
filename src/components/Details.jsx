@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import flash1 from "../assets/flashA.png";
-import ViewBtn from "../shared/ViewBtn";
+
 import CheckoutProduct from "./products/CheckoutProduct";
 import { CartContext } from "./context/ContextProvider";
 
@@ -63,7 +62,7 @@ const Details = () => {
           />
           <a
             href="#"
-            className="bg-[#FF8933] text-center text-white py-4 md:py-[13px] lg:py-[15px] px-5 w-[100%] lg:w-[35%] font-semibold text-[12px]"
+            className="bg-[#FF8933] rounded-[4px]  text-center text-white py-4 md:py-[13px] lg:py-[15px] px-5 w-[100%] lg:w-[35%] font-semibold text-[12px]"
           >
             Apply Coupon
           </a>
@@ -71,7 +70,7 @@ const Details = () => {
 
         <button
           href="#"
-          className="mt-8 bg-[#FF8933] text-white py-4 md:py-[13px] px-3 w-[100%] lg:w-[35%] font-semibold text-[12px]"
+          className="mt-8 bg-[#FF8933] rounded-[4px]  text-white py-4 md:py-[13px] px-3 w-[100%] lg:w-[35%] font-semibold text-[12px]"
         >
           Place Order
         </button>
