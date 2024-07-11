@@ -7,14 +7,12 @@ export default {
       poppin: ["Poppins", "san-serif"],
       inter: ["Inter", "sans-serif"],
     },
-
-    extend: {
-      screen: {
-        xs: "320px",
-        xm: "410px",
-        ...defaultTheme.screens,
-      },
+    screen: {
+      xs: "320px",
+      sm: "410px",
+      ...defaultTheme.screens,
     },
+    extend: {},
   },
 
   plugins: [],
