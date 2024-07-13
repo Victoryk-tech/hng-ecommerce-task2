@@ -16,6 +16,8 @@ import FlashDetails from "./components/Details/FlashDetails";
 import BestDetails from "./components/Details/BestDetails";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
+import Texting from "./components/Texting";
+import CreatePage from "./Pages/CreatePage";
 
 function App() {
   return (
@@ -32,7 +34,9 @@ function App() {
           <Route path="productDetails/:id" element={<ProductDetails />} />
           <Route path="flashDetails/:id" element={<FlashDetails />} />
           <Route path="BestDetails/:id" element={<BestDetails />} />
+          <Route path="text" element={<Texting />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="create" element={<CreatePage />} />
         </Routes>
 
         <Footer />
