@@ -8,6 +8,7 @@ const reg = require("./models/regModal");
 const errorMiddleware = require("./middleware/errMiddleware");
 
 const blogRoutes = require("./routes/blogRoutes");
+const usersRoute = require("./routes/usersRoute");
 const app = express();
 
 //refactor .env
@@ -28,6 +29,7 @@ app.use(errorMiddleware);
 app.use(cors(grantAccess));
 //routes
 app.use("/api/blog", blogRoutes);
+app.use("/api/user", usersRoute);
 
 //connect to mongoose
 mongoose.set("strictQuery", false);
@@ -45,3 +47,14 @@ mongoose
 app.get("/", (req, res) => {
   res.send("whatever");
 });
+
+// registration
+//app.get("/", cors(), (req, res) => {});
+
+//app.post("/login",);
+
+//app.post("/signup",);
+
+// app.listen(8000, () => {
+//   console.log("port connected");
+// });

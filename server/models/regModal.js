@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 
 const registerSchema = mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: [true, "Please enter a name"],
-    },
-
     email: {
       type: String,
       required: true,

@@ -18,6 +18,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 import Texting from "./components/Texting";
 import CreatePage from "./Pages/CreatePage";
+import Dashboardpage from "./Pages/Dashboard/Dashboardpage";
+import SideLinks from "./components/SideLinks";
+import Edit from "./components/Edit";
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
+import HomeDashboard from "./components/HomeDashboard";
 
 function App() {
   return (
@@ -36,7 +42,15 @@ function App() {
           <Route path="BestDetails/:id" element={<BestDetails />} />
           <Route path="text" element={<Texting />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="create" element={<CreatePage />} />
+
+          <Route path="board" element={<Dashboardpage />}>
+            <Route path="home" element={<HomeDashboard />} />
+            <Route path="createProduct" element={<CreatePage />} />
+            <Route path="editProduct" element={<Edit />} />
+          </Route>
+
+          <Route path="signup" element={<SignUp />} />
+          <Route path="login" element={<Login />} />
         </Routes>
 
         <Footer />
