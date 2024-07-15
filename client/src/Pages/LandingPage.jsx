@@ -14,8 +14,7 @@ const LandingPage = () => {
   return (
     <div className="w-full h-auto bg-[#fff] scroll-smooth">
       <Hero />
-      <Flash />
-      <BestSeller />
+
       <Main />
 
       <Service />

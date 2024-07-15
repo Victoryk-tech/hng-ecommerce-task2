@@ -2,29 +2,35 @@ const mongoose = require("mongoose");
 
 const blogSchema = mongoose.Schema(
   {
-    name: {
+    title: {
       type: String,
-      required: [true, "Please enter a product name"],
+      required: [true, "Please enter a product title"],
+      trim: true,
     },
     description: {
       type: String,
       required: true,
+      trim: true,
     },
     amount: {
       type: Number,
       required: true,
+      trim: true,
     },
     oldprice: {
       type: Number,
       required: true,
+      trim: true,
     },
     rating: {
       type: Number,
       required: true,
+      trim: true,
     },
     image: {
       type: String,
       required: true,
+      trim: true,
     },
   },
   {

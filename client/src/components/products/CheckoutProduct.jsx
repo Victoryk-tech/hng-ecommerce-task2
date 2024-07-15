@@ -6,11 +6,11 @@ const CheckoutProduct = ({ Items }) => {
   return (
     <div className="flex items-center justify-between py-2 w-full">
       <div className="flex items-center justify-center gap-2">
-        <img src={image[0]} alt="" className="w-16 h-16 object-contain" />
-        <p className="font-poppin font-normal text-[16px]">{title[0]}</p>
+        <img src={image} alt="" className="w-16 h-16 object-contain" />
+        <p className="font-poppin font-normal text-[16px]">{title}</p>
       </div>
       <p className="font-poppin font-normal text-[16px]">
-        ${`${parseFloat(quantity * amount[0]).toLocaleString()}`}
+        ${`${parseFloat(quantity * amount).toLocaleString()}`}
       </p>
     </div>
   );

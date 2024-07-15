@@ -38,8 +38,7 @@ function App() {
           <Route path="cart" element={<CartPage />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="productDetails/:id" element={<ProductDetails />} />
-          <Route path="flashDetails/:id" element={<FlashDetails />} />
-          <Route path="BestDetails/:id" element={<BestDetails />} />
+
           <Route path="text" element={<Texting />} />
           <Route path="*" element={<NotFound />} />
 
