@@ -12,18 +12,20 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProductDetails from "./components/ProductDetails";
 import NotFound from "./Pages/NotFound";
-import FlashDetails from "./components/Details/FlashDetails";
-import BestDetails from "./components/Details/BestDetails";
+
 import "react-toastify/dist/ReactToastify.css";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import Texting from "./components/Texting";
 import CreatePage from "./Pages/CreatePage";
 import Dashboardpage from "./Pages/Dashboard/Dashboardpage";
-import SideLinks from "./components/SideLinks";
+
 import Edit from "./components/Edit";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import HomeDashboard from "./components/HomeDashboard";
+import Main from "./components/Main";
+import ProductsPage from "./Pages/ProductsPage";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -32,15 +34,15 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<LandingPage />} />
+          <Route path="/" element={<ProductsPage />}>
+            <Route path="main" element={<Main />} />
           </Route>
-          <Route path="cart" element={<CartPage />} />
-          <Route path="checkout" element={<Checkout />} />
           <Route path="productDetails/:id" element={<ProductDetails />} />
 
+          <Route path="cart" element={<CartPage />} />
+          <Route path="checkout" element={<Checkout />} />
+
           <Route path="text" element={<Texting />} />
-          <Route path="*" element={<NotFound />} />
 
           <Route path="board" element={<Dashboardpage />}>
             <Route path="home" element={<HomeDashboard />} />
@@ -50,6 +52,7 @@ function App() {
 
           <Route path="signup" element={<SignUp />} />
           <Route path="login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />

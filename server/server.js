@@ -1,24 +1,24 @@
 require("dotenv").config();
-
+const bodyParser = require("body-parser");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const blog = require("./models/blogModel");
-const reg = require("./models/regModal");
+
 const errorMiddleware = require("./middleware/errMiddleware");
 
-const blogRoutes = require("./routes/blogRoutes");
+const productRoutes = require("./routes/productRoutes");
 const usersRoute = require("./routes/usersRoute");
 const app = express();
 
 //refactor .env
+
 const PORT = process.env.PORT || 8000;
 const FRONTEND = process.env.FRONTEND;
 const MONGO_URL = process.env.MONGO_URL;
 
 //browsers to access this api via cors
 const grantAccess = {
-  origin: FRONTEND,
+  origin: "http://localhost:5173",
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
@@ -27,8 +27,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(errorMiddleware);
 app.use(cors(grantAccess));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 //routes
-app.use("/api/blog", blogRoutes);
+app.use("/api/product", productRoutes);
 app.use("/api/user", usersRoute);
 
 //connect to mongoose

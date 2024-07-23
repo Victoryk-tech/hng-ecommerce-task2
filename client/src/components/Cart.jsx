@@ -42,10 +42,10 @@ const Cart = () => {
 
               <div className="flex flex-row items-center justify-between w-full mt-4">
                 {" "}
-                <button className="border-[#FF8933] rounded-[4px]  text-center text-[#FF8933] transition-all ease-in hover:bg-[#FF8933] hover:text-white border-[1px] hover:scale-100 py-4 md:py-5 lg:py-[13px] px-5 w-[37%] md:w-[30%] lg:w-[16%] font-semibold text-[12px]">
+                <button className="border-[#492C02] rounded-[4px]  text-center text-[#492C02] transition-all ease-in hover:bg-[#492C02] hover:text-white border-[1px] hover:scale-100 py-4 md:py-5 lg:py-[13px] px-5 w-[37%] md:w-[30%] lg:w-[16%] font-semibold text-[12px]">
                   <Link to="/">Return to Shop</Link>
                 </button>
-                <button className="bg-[#FF8933] rounded-[4px]  text-center text-white transition-all ease-in hover:bg-white hover:text-[#FF8933] hover:border-[#FF8933] hover:border-[1px] hover:scale-100 py-4 md:py-5 lg:py-[13px] px-5 w-[37%] md:w-[30%] lg:w-[16%] font-semibold text-[12px]">
+                <button className="bg-[#492C02] rounded-[4px]  text-center text-white transition-all ease-in hover:bg-white hover:text-[#492C02] hover:border-[#492C02] hover:border-[1px] hover:scale-100 py-4 md:py-5 lg:py-[13px] px-5 w-[37%] md:w-[30%] lg:w-[16%] font-semibold text-[12px]">
                   Update Cart
                 </button>
               </div>
@@ -56,7 +56,7 @@ const Cart = () => {
                     placeholder="Coupon code"
                     className="p-3 md::py-2 w-[100%] lg:w-[35%] border-black border-[1px] text-[15px]"
                   />
-                  <button className="bg-[#FF8933] rounded-[4px] text-center text-white py-4 md:py-[15px] px-5 w-[100%] md:w-[70%] lg:w-[20%] font-semibold text-[12px]">
+                  <button className="bg-[#492C02] hover:border-[#492C02] hover:text-[#492C02] hover:border-[1px] hover:bg-transparent rounded-[4px] text-center text-white py-4 md:py-[15px] px-5 w-[100%] md:w-[70%] lg:w-[20%] font-semibold text-[12px]">
                     Apply Coupon
                   </button>
                 </div>
@@ -85,7 +85,7 @@ const Cart = () => {
                     </p>
                   </div>
 
-                  <button className="bg-[#FF8933] rounded-[4px]  text-center ml-20 md:ml-8  text-white hover:text-[#FF8933] hover:bg-white hover:border-[1px] hover:border-[#FF8933] hover:scale-100 transition-all ease-in py-4 md:py-[13px] px-4 w-[53%] md:w-[75%] font-semibold text-[12px]">
+                  <button className="bg-[#492C02] rounded-[4px]  text-center ml-20 md:ml-8  text-white hover:text-[#492C02] hover:bg-white hover:border-[1px] hover:border-[#492C02] hover:scale-100 transition-all ease-in py-4 md:py-[13px] px-4 w-[53%] md:w-[75%] font-semibold text-[12px]">
                     <Link to="/checkout">Procced to checkout</Link>
                   </button>
                 </div>
@@ -96,7 +96,7 @@ const Cart = () => {
           <div className="flex flex-col items-center justify-center py-28">
             <div className="flex flex-col items-center space-y-4 bg-slate-100 p-16">
               <h1 className="font-semibold text-xl ">Your Cart is empty</h1>
-              <p className="p-2 bg-[#FF8933] rounded- text-white font-poppin font-bold">
+              <p className="p-2 bg-[#492C02]  rounded-sm hover:border-[#492C02] hover:border-[1px] hover:text-[#492C02] hover:bg-transparent text-white font-poppin font-bold">
                 <Link to="/">Start Shopping</Link>
               </p>
             </div>

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const CreatePage = () => {
   const [title, setTitle] = useState("");
@@ -10,6 +11,8 @@ const CreatePage = () => {
   const [image, setImage] = useState("");
   const [amount, setAmount] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
   const saveProduct = async (e) => {
     e.preventDefault();
     if (
@@ -25,7 +28,7 @@ const CreatePage = () => {
     }
     try {
       setIsLoading(true);
-      const response = await axios.post("http://localhost:8000/api/blog", {
+      const response = await axios.post("http://localhost:8000/api/product", {
         title: title,
 
         description: description,
@@ -35,12 +38,13 @@ const CreatePage = () => {
         image: image,
       });
 
-      toast.success(`save ${response.data.name} successfully`);
-      setIsLoading(false);
-      Navigate("/");
+      toast.success(`save ${response.data.title} successfully`);
+
+      navigate("/");
     } catch (error) {
       toast.error(error.message);
-      console.log("error");
+      console.log(error.message);
+    } finally {
       setIsLoading(false);
     }
   };

@@ -1,29 +1,100 @@
-import React from "react";
-import hero from "../assets/herror.png";
-import heror from "../assets/herop.png";
-import stroke from "../assets/stroke.png";
+import React, { useEffect, useRef, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { heroData } from "../../src/components/database/heroData";
 
 const Hero = () => {
-  return (
-    <div className="px-2  md:px-4 lg:px-20 py-20 md:py-10 font-inter w-full">
-      <div className="flex flex-col md:flex md:flex-row items-center justify-center md:items-center md:justify-between md:gap-x-7">
-        <div className="  text-center lg:w-[382px]">
-          <h1 className="font-semibold text-[36px] text-center lg:pr-6">
-            Transform Your Spa Today
-          </h1>
-          <img src={stroke} alt="" className="pl-9 md:pl-0 lg:pl-1" />
-        </div>
-        <div className="flex items-end justify-end pt-20 md:pt-0 w-[386px] lg-w-[885px] ">
-          <div className="md:w-[15rem] lg:w-80 w-[13rem]">
-            <img src={heror} alt="" className="w-full h-full object-contain" />
-          </div>
+  const [index, setIndex] = useState(0);
+  const timeoutRef = useRef(null);
+  const delay = 5000;
 
-          <div className="w-[10.6rem]  md:w-[11rem] lg:w-56 pb-4 lg:pb-9">
-            <img src={hero} alt="" className="w-full h-full object-contain" />
-          </div>
-        </div>
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setIndex((prevIndex) =>
+          prevIndex === heroData.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
+    return () => {
+      resetTimeout();
+    };
+  }, [index]);
+
+  //animation on scroll trigger
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  return (
+    <section id="hero" className="overflow-hidden slideshow relative">
+      <div
+        className=" lg:h-[100vh] h-[60vh] flex w-full slideshowSlider"
+        style={{
+          transform: `translate3d(${-index * 100}%, 0, 0)`,
+          transition: "ease-in 600ms",
+        }}
+      >
+        {heroData.map((data, index) => {
+          return (
+            <div
+              key={index}
+              className="slide h-full w-full bg-ivory flex-shrink-0 flex items-center justify-start bg-no-repeat bg-cover bg-center"
+              style={{ backgroundImage: `url(${data.image})` }}
+            >
+              <div
+                className=" flex flex-col justify-start items-start p-2 md:pl-5"
+                data-aos="fade-down"
+              >
+                <div className="space-y-2 flex flex-col justify-center items-center">
+                  <p
+                    data-aos="fade-up"
+                    className="font-inter font-extrabold drop-shadow-md text-xl md:text-4xl text-brown3"
+                  >
+                    {data.title}
+                    <strong className="text-ivory sm:text-brown font-bold font-zeyada text-2xl md:text-3xl">
+                      {data.title2}
+                    </strong>
+                  </p>
+                  <p className="md:font-zeyada font-poppins text-base md:text-4xl">
+                    {data.description}
+                  </p>
+                  {/* <Link to="/layout/shop" onClick={scrollToTop}>
+                    <Button />
+                  </Link> */}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </div>
+      <div className="text-center absolute right-0 left-0 bottom-0 space-x-2 ">
+        {heroData.map((_, idx) => (
+          <div
+            key={idx}
+            onClick={() => setIndex(idx)}
+            className={`slideshowDot${
+              index === idx && " active"
+            } space-x-2 rounded-full h-2 w-5 inline-block cursor-pointer bg-gray`}
+          ></div>
+        ))}
+      </div>
+    </section>
   );
 };
 

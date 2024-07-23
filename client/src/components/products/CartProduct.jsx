@@ -64,7 +64,7 @@ const CartProduct = ({ cartItems }) => {
       </div>
       <div
         onClick={() => removeFromCart(cartItems)}
-        className="text-xl font-semibold hover:text-[#FF8933]"
+        className="text-xl font-semibold hover:text-[#492C02]"
       >
         <AiOutlineDelete />
       </div>

@@ -4,7 +4,7 @@ import send from "../assets/sendicon.png";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="bg-[#fff] pt-36">
+    <div className="bg-[#f5f5f5]">
       <div className="  pt-[56px] pb-[32px] gap-[60px] md:px-6 lg:px-[146px] lg:py-[16px] lg:gap-[40px] bg-[#5B3702] text-white">
         <div className="space-y-[100px] md:space-y-[24px] flex flex-col md:flex-row items-start justify-start md:justify-between border-b-[1px] py-[72px] px-[24px] md:py-16 w-ull">
           <div className="space-y-2 w-full">
@@ -17,7 +17,7 @@ const Footer = () => {
                 Get 10% off your first order
               </p>
             </div>
-            <div className="flex items-start justify-between py-3 px-3 w-[350px] md:w-[82%] lg:w-[50%] border-white border-[1.5px]  bg-transparent text-[16px] font-normal font-poppin">
+            <div className="flex items-start justify-between px-2 py-3 w-[320px] md:w-[82%] lg:w-[50%] border-white border-[1.5px]  bg-transparent text-[16px] font-normal font-poppin">
               <input
                 type="text"
                 placeholder="Enter your email"

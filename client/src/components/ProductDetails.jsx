@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
-import products from "./database/mainProduct";
+
 import deliver from "../assets/deliver.png";
 
 import fivestar from "../assets/fivestar.png";

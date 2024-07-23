@@ -26,7 +26,7 @@ const MainProducts = ({ Product, getProducts }) => {
     if (result.isConfirmed) {
       try {
         const response = await axios.delete(
-          `http://localhost:8000/api/blog/${id}`
+          `http://localhost:8000/api/product/${id}`
         );
         toast.success("delete a blog successfully");
         getProducts();
@@ -41,26 +41,32 @@ const MainProducts = ({ Product, getProducts }) => {
     toast.success("product added successfully");
   };
   return (
-    <div className="flex flex-col justify-start items-start pb-16 md:pb-0 bg-white rounded-sm shadow-md hover:shadow-lg w-[170px] lg:w-[251px] h-[215px] md:w-[223px] md:h-[280px] lg:h-[290px] hover:scale-95 ease-in-out transition-all">
-      <div className="p-2 flex items-center justify-center md:w-[165px] w-full h-full lg:w-full lg:h-1/2 md:full lg:mb-4">
+    <div className="flex flex-col justify-start items-start  bg-white rounded-sm shadow-md hover:shadow-lg w-[200px] h-[245px] hover:scale-95 ease-in-out transition-all">
+      <div className="p-2 flex items-center justify-center w-full h-1/2">
         <Link to={`productDetails/${Product._id}`}>
           <img src={image} alt="" className="w-full h-full object-contain" />
         </Link>
       </div>
 
-      <div className=" w-full bg-[#F5F5F5] px-2 py-4 md:py-5 lg:py-2">
-        <div className="flex items-start justify-between">
+      <div className=" w-full bg-[#F5F5F5] px-2">
+        <div className="flex flex-col items-center justify-center py-2">
           <h2 className="text-[14px] md:text-[16px] font-medium">{title}</h2>
+        </div>
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-[14px] md:text-[16px] text-[#DB4444]">
+              ${amount}
+            </p>
+            {/* <p className="text-[14px] md:text-[16px] line-through">
+              ${oldprice}
+            </p> */}
+          </div>
           <p
-            className="text-[20px] text-center font-[900] bg-[#FF8933] p-[10px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
+            className="text-[20px] text-center font-[900] bg-[#FF8933] p-[8px] rounded-3xl text-white hover:bg-[#F18A3F] transition-none ease-out"
             onClick={() => addToCart(Product)}
           >
             <BsBag />
           </p>
-        </div>
-        <div className="flex items-start justify-start gap-3">
-          <p className="text-[14px] md:text-[16px] text-[#DB4444]">${amount}</p>
-          <p className="text-[14px] md:text-[16px] line-through">${oldprice}</p>
         </div>
         <div className="flex items-start justify-start">
           <img src={fivestar} alt="" />
