@@ -3,7 +3,6 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
-import Layout from "./components/Layout";
 import CartPage from "./Pages/CartPage";
 import Checkout from "./Pages/Checkout";
 
@@ -26,32 +25,39 @@ import HomeDashboard from "./components/HomeDashboard";
 import Main from "./components/Main";
 import ProductsPage from "./Pages/ProductsPage";
 import Hero from "./components/Hero";
+import ConditionalRoute from "./components/ConditionalRoute";
+import DashProduct from "./components/DashProduct";
+import Customers from "./components/Customers";
+import Orders from "./components/Orders";
 
 function App() {
   return (
     <>
       <ToastContainer />
       <BrowserRouter>
-        <Header />
+        <ConditionalRoute>
+          <Header />
+        </ConditionalRoute>
+
         <Routes>
           <Route path="/" element={<ProductsPage />}>
             <Route path="main" element={<Main />} />
           </Route>
           <Route path="productDetails/:id" element={<ProductDetails />} />
-
           <Route path="cart" element={<CartPage />} />
           <Route path="checkout" element={<Checkout />} />
-
           <Route path="text" element={<Texting />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route path="login" element={<Login />} />
 
           <Route path="board" element={<Dashboardpage />}>
             <Route path="home" element={<HomeDashboard />} />
+            <Route path="products" element={<DashProduct />} />
             <Route path="createProduct" element={<CreatePage />} />
+            <Route path="customers" element={<Customers />} />
+            <Route path="orders" element={<Orders />} />
             <Route path="editProduct" element={<Edit />} />
           </Route>
-
-          <Route path="signup" element={<SignUp />} />
-          <Route path="login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

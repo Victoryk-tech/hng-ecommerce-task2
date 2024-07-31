@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProductSidebar = () => {
   return (
-    <div className=" hidden md:block px-2">
+    <div className="px-2">
       <div className="space-y-3 py-4 border-b-[1px] shadow-sm">
         <h1 className="text-[18px] font-inter py-2 font-bold">Category</h1>
         <Link to="main">

@@ -49,7 +49,7 @@ const CreatePage = () => {
     }
   };
   return (
-    <div className="px-2 md:px-4 lg:px-36 py-10 ">
+    <div className="py-2 ">
       <form
         action="form"
         onSubmit={saveProduct}
@@ -60,46 +60,55 @@ const CreatePage = () => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="title"
-          className="pl-2 pr-32 py-2 outline-none border-green-500 border-[1px]"
+          className="pl-2 w-80 py-2 outline-none border-[#5B3702] border-[1px]"
         />
-        <input
+
+        <div className="flex items-start justify-center gap-x-2">
+          <input
+            type="Number"
+            value={rating}
+            onChange={(e) => setRating(e.target.value)}
+            placeholder="Rating"
+            className="pl-2 w-20  py-2 outline-none border-[#5B3702] border-[1.3px]"
+          />
+          <input
+            type="Number"
+            value={oldprice}
+            onChange={(e) => setOldPrice(e.target.value)}
+            placeholder="oldprice"
+            className="pl-2 w-28  py-2 outline-none border-[#5B3702] border-[1.3px]"
+          />
+
+          <input
+            type="Number"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            placeholder="amount"
+            className="pl-2 w-28  py-2 outline-none border-[#5B3702] border-[1.3px]"
+          />
+        </div>
+        <textarea
           type="text"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Description"
-          className="pl-2 pr-32 py-2 outline-none border-green-500 border-[1px]"
-        />
-        <input
-          type="Number"
-          value={rating}
-          onChange={(e) => setRating(e.target.value)}
-          placeholder="Rating"
-          className="pl-2 pr-32 py-2 outline-none border-green-500 border-[1px]"
-        />
-        <input
-          type="Number"
-          value={oldprice}
-          onChange={(e) => setOldPrice(e.target.value)}
-          placeholder="oldprice"
-          className="pl-2 pr-32 py-2 outline-none border-green-500 border-[1px]"
-        />
+          rows={6}
+          className="pl-2 w-80  py-2 outline-none border-[#5B3702] border-[1.3px]"
+        ></textarea>
 
-        <input
-          type="Number"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          placeholder="amount"
-          className="pl-2 pr-32 py-2 outline-none border-green-500 border-[1px]"
-        />
         <input
           type="text"
           value={image}
           onChange={(e) => setImage(e.target.value)}
           placeholder="Image URL"
-          className="pl-2 pr-32 py-2 outline-none border-green-500 border-[1px]"
+          className="pl-2 w-80 py-2 outline-none border-[#5B3702] border-[1px]"
         />
 
-        {!isLoading && <button>submit</button>}
+        {!isLoading && (
+          <button className="border-[#5B3702] border-[1px] w-24 py-2 rounded-md hover:bg-[#5B3702] hover:border-none hover:outline-none hover:text-white hover:shadow-md transition-all ease-out">
+            Submit
+          </button>
+        )}
       </form>
     </div>
   );

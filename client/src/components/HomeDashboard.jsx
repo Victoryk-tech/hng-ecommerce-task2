@@ -1,14 +1,7 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 
 const HomeDashboard = () => {
-  const location = useLocation();
-  console.log(location);
-  return (
-    <div>
-      <h1>Hello {location.state.email} and welcome to the home</h1>
-    </div>
-  );
+  return <div>Hello</div>;
 };
 
 export default HomeDashboard;

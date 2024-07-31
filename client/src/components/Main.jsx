@@ -31,7 +31,7 @@ const Main = () => {
     setVisible((prevValue) => prevValue + 4);
   };
   return (
-    <div className="px-2  w-full border-b-[0.1px] border-black md:border-none">
+    <div className="px-2 w-full border-b-[0.1px] border-black md:border-none">
       <div>
         {isLoading ? (
           "loading......."

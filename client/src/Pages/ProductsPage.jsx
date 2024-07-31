@@ -19,9 +19,9 @@ const ProductsPage = () => {
           </h1>
         </div>
 
-        <div className="relative bg-brown3 md:grid grid-cols-5">
+        <div className="relative bg-brown3 flex w-full">
           <ProductSidebar />
-          <div className="col-span-2 lg:col-span-5 md:col-span-4">
+          <div className="w-[80%]">
             <Outlet />
           </div>
         </div>
